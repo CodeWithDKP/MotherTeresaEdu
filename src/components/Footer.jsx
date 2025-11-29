@@ -1,4 +1,6 @@
 import { useApp } from "../components/context/AppContext";
+import { Link } from "react-router-dom";
+
 import {
   BsInstagram,
   BsFacebook,
@@ -32,6 +34,7 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="footer-container">
+        {/* LEFT */}
         <div className="footer-left">
           <img src={footer.logo} alt="logo" className="footer-logo" />
           <p className="footer-desc">{footer.description}</p>
@@ -39,22 +42,35 @@ export default function Footer() {
           <h4 className="footer-title">Quick Links</h4>
           <ul className="footer-links">
             {footer.leftLinks.map((item, i) => (
-              <li key={i}>{item}</li>
+              <li key={i}>
+                <Link to={item.path} className="footer-link">{item.name}</Link>
+              </li>
             ))}
           </ul>
 
           <div className="footer-socials">
             {footer.socials.map((s, i) => (
-              <span key={i}>{socialIcons[s.icon]}</span>
+              <a
+                key={i}
+                href={s.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footer-social-link"
+              >
+                {socialIcons[s.icon]}
+              </a>
             ))}
           </div>
         </div>
 
+        {/* RIGHT */}
         <div className="footer-right">
           <h4 className="footer-title">Quick Links</h4>
           <ul className="footer-links">
             {footer.rightLinks.map((item, i) => (
-              <li key={i}>{item}</li>
+              <li key={i}>
+                <Link to={item.path} className="footer-link">{item.name}</Link>
+              </li>
             ))}
           </ul>
 

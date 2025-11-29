@@ -1,11 +1,17 @@
-import React from 'react'
+export default function Button({ 
+  children, 
+  variant = "primary", 
+  size = "md",
+  onClick, 
+  className = "",
+  type = "button",
+}) {
 
-const Button = () => {
+  const baseClass = `btn btn-${variant} btn-${size} ${className}`;
+
   return (
-    <div>
-      
-    </div>
-  )
+    <button type={type} onClick={onClick} className={baseClass}>
+      {children}
+    </button>
+  );
 }
-
-export default Button

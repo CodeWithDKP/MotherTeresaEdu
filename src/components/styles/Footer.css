@@ -5,8 +5,8 @@
 }
 
 .footer-container {
-    width: 90%;
-    max-width: 1300px;
+    width: auto;
+    
     margin: auto;
     margin-left: 20%;
     display: flex;
@@ -64,6 +64,9 @@
     margin-right: 12px;
     font-size: 16px;
 }
+.footer-socials a{
+    margin-left: 10px;
+}
 
 .footer-bottom {
     text-align: center;
@@ -73,14 +76,18 @@
     background-color: black;
 }
 
-/* MOBILE */
-@media (max-width: 768px) {
-    .footer-container {
-        flex-direction: column;
-    }
+/* Remove underline */
+.footer-link,
+.footer-social-link {
+    text-decoration: none;
+    color: inherit;
+}
 
-    .footer-left,
-    .footer-right {
-        width: 100%;
+/* On mobile align all items left */
+@media (max-width: 768px) {
+    .footer-container{
+        padding: 50px;
+        margin-left: 10px;
+        
     }
 }

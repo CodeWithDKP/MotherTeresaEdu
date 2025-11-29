@@ -5,7 +5,7 @@ export default function MainLayout({ children }) {
   return (
     <>
       <Header />
-      <main className="container py-4">{children}</main>
+      <main>{children}</main>
       <Footer />
     </>
   );

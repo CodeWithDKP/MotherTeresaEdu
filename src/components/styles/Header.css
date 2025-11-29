@@ -1,13 +1,13 @@
 .navBar {
-  margin: 0px 200px;
+  margin: 0 200px;
 }
 
 .nav-link {
   position: relative;
-  padding: 0px 0px;
   font-size: 1.1rem;
   font-weight: 400;
-  color: #000000 !important;
+  color: #000 !important;
+  padding: 6px 0;
 }
 
 .nav-link::after {
@@ -15,31 +15,43 @@
   position: absolute;
   left: 0;
   bottom: 0;
-  height: 1.8px;
-  width: 0%;
+  height: 2px;
+  width: 0;
   background-color: #f8880c;
   transition: width 0.3s ease;
 }
 
-.nav-link:hover::after {
-  width: 80%;
-  margin-left: 7px;
-}
-
+.nav-link:hover::after,
 .nav-link.active::after {
   width: 80%;
   margin-left: 7px;
 }
 
+/* MOBILE FIXES */
+@media (max-width: 991px) {
+  .navBar {
+    margin: 0 16px;
+  }
 
-.nav-mobile-list .nav-item {
-  padding: 12px 0;
-  border-bottom: 1px solid #eee;
+  .navbar-brand img {
+    height: 55px;
+  }
+
+
+  .nav-link {
+    font-size: 1rem;
+    padding: 6px 0;
+    border-bottom: #000 0.5px solid;
+  }
+
+  .nav-link::after {
+    bottom: 5px;
+    
+  }
+  .nav-link:hover::after,
+.nav-link.active::after {
+  width: 12%;
+  margin-left: 0px;
 }
 
-@media (min-width: 992px) {
-  .nav-mobile-list .nav-item {
-    border: none;
-    padding: 0;
-  }
 }
