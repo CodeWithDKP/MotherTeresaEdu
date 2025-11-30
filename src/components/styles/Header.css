@@ -27,14 +27,13 @@
   margin-left: 7px;
 }
 
-/* MOBILE FIXES */
 @media (max-width: 991px) {
   .navBar {
     margin: 0 16px;
   }
 
   .navbar-brand img {
-    height: 55px;
+    height: 50px;
   }
 
 

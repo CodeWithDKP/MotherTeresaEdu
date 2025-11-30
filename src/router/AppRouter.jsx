@@ -1,11 +1,10 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import MainLayout from "../layouts/MainLayout";
-
-import Home from "../../components/pages/Home";
-import About from "../../components/pages/About";
-import Team from "../../components/pages/Team";
-import Careers from "../../components/pages/Careers";
-import Contact from "../../components/pages/Contact";
+import MainLayout from '../layouts/MainLayout';
+import Home from '../pages/Home';
+import About from "../pages/About";
+import Team from "../pages/Team";
+import Careers from "../pages/Careers";
+import Contact from "../pages/Contact";
 
 export default function AppRouter() {
   return (

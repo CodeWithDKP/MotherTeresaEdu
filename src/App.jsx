@@ -1,5 +1,5 @@
-import AppRouter from "./components/router/AppRouter";
-import { AppProvider } from "./components/context/AppContext";
+import AppRouter from './router/AppRouter';
+import { AppProvider } from './context/AppContext';
 
 export default function App() {
   return (

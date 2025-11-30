@@ -1,5 +1,5 @@
-import { useApp } from "../components/context/AppContext";
-import { Link } from "react-router-dom";
+import { useApp } from "../context/AppContext";
+import { NavLink } from "react-router-dom";
 
 import {
   BsInstagram,
@@ -36,14 +36,14 @@ export default function Footer() {
       <div className="footer-container">
         {/* LEFT */}
         <div className="footer-left">
-          <img src={footer.logo} alt="logo" className="footer-logo" />
+         <NavLink to={"/"}> <img src={footer.logo} alt="logo" className="footer-logo" /></NavLink>
           <p className="footer-desc">{footer.description}</p>
 
           <h4 className="footer-title">Quick Links</h4>
           <ul className="footer-links">
             {footer.leftLinks.map((item, i) => (
               <li key={i}>
-                <Link to={item.path} className="footer-link">{item.name}</Link>
+                <NavLink to={item.path} className="footer-link">{item.name}</NavLink>
               </li>
             ))}
           </ul>
@@ -69,7 +69,7 @@ export default function Footer() {
           <ul className="footer-links">
             {footer.rightLinks.map((item, i) => (
               <li key={i}>
-                <Link to={item.path} className="footer-link">{item.name}</Link>
+                <NavLink to={item.path} className="footer-link">{item.name}</NavLink>
               </li>
             ))}
           </ul>

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { useApp } from "../components/context/AppContext";
-import "../components/styles/Header.css";
+import { useApp } from "../context/AppContext";
+import "../components/styles/header.css";
 
 export default function Header() {
   const { logo, menus } = useApp();
@@ -10,7 +10,7 @@ export default function Header() {
   const closeMenu = () => setIsOpen(false);
 
   return (
-    <nav className="navbar navbar-expand-lg sticky-top bg-white shadow-sm">
+    <nav className="navbar navbar-expand-lg sticky-top bg-white">
       <div className="container navBar">
         <NavLink to="/" className="navbar-brand" onClick={closeMenu}>
           <img src={logo} alt="logo" style={{ height: "80px" }} />
