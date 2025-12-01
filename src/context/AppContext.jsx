@@ -21,6 +21,18 @@ import student1 from '../images/at_1.png'
 import student2 from '../images/at_2.jpg'
 import student3 from '../images/at_3.jpg'
 
+//icons
+import {
+  BsInstagram,
+  BsFacebook,
+  BsLinkedin,
+  BsTwitter,
+  BsYoutube,
+  BsTelephoneFill,
+  BsEnvelopeFill,
+  BsGeoAltFill
+} from "react-icons/bs";
+
 const AppContext = createContext();
 
 export const AppProvider = ({ children }) => {
@@ -31,15 +43,11 @@ export const AppProvider = ({ children }) => {
   // static menus
   const menus = [
     { name: "Home", path: "/" },
-    { name: "About", path: "/about" },
-    { name: "Team", path: "/team" },
+    { name: "About Us", path: "/about" },
+    { name: "Our Team", path: "/team" },
     { name: "Careers", path: "/careers" },
-    { name: "Contact", path: "/contact" }
+    { name: "Contact Us", path: "/contact" }
   ];
-
-  // theme can change → keep in state (optional)
-  const [theme, setTheme] = useState("light");
-
   // static footer data
   const footer = {
     logo: Logo_white,
@@ -47,10 +55,10 @@ export const AppProvider = ({ children }) => {
 
     leftLinks: [
       { name: "Home", path: "/" },
-    { name: "About", path: "/about" },
-    { name: "Team", path: "/team" },
-    { name: "Careers", path: "/careers" },
-    { name: "Contact", path: "/contact" }
+      { name: "About", path: "/about" },
+      { name: "Team", path: "/team" },
+      { name: "Careers", path: "/careers" },
+      { name: "Contact", path: "/contact" }
     ],
 
     rightLinks: [
@@ -58,20 +66,6 @@ export const AppProvider = ({ children }) => {
       { name: "Terms & Conditions", path: "/" },
       { name: "FAQ", path: "/" },
       { name: "Support", path: "/" }
-    ],
-
-    socials: [
-      { icon: "instagram", url: "https://instagram.com" },
-      { icon: "facebook", url: "https://facebook.com" },
-      { icon: "linkedin", url: "https://linkedin.com" },
-      { icon: "twitter", url: "https://twitter.com" },
-      { icon: "youtube", url: "https://youtube.com" }
-    ],
-
-    contact: [
-      { icon: "phone", text: "+91 98765 43210" },
-      { icon: "mail", text: "support@yourdomain.com" },
-      { icon: "globe", text: "www.yourdomain.com" }
     ]
   };
   // ---------- STATES + CITIES DATA ----------
@@ -295,13 +289,45 @@ export const AppProvider = ({ children }) => {
     ],
 
   }
+  const about = {
+    counters: [
+      { number: 10000, label: "Enrolled +" },
+      { number: 100, label: "Colleges & Universities +" },
+      { number: 50, label: "Courses +" },
+      { number: 1000, label: "Counsellors +" },
+    ],
+  }
+  const Links_Address = {
+    socials: [
+      { icon: BsInstagram, url: "https://instagram.com" },
+      { icon: BsFacebook, url: "https://facebook.com" },
+      { icon: BsLinkedin, url: "https://linkedin.com" },
+      { icon: BsTwitter, url: "https://twitter.com" },
+      { icon: BsYoutube, url: "https://youtube.com" }
+    ],
+
+    contact: [
+      { icon: BsTelephoneFill, text: "+91 98765 43210" },
+      { icon: BsEnvelopeFill, text: "support@yourdomain.com" },
+      { icon: BsGeoAltFill, text: "M-1005, City Avenue, Wakad, Pune - 411057" }
+    ],
+
+    branchOffice: {
+      icon: BsGeoAltFill,
+      address: "UG-24, Jaipur Electronic Market, Riddhi–Siddhi, Gopalpura, Jaipur - 302018"
+    },
+    map: {
+      embedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2843.788852872656!2d77.60893166791742!3d14.6500319068576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb14baaabd2e5f5%3A0xf81d6ad4f85396ec!2sJNTUA%20Administrative%20block!5e0!3m2!1sen!2sin!4v1764588297831!5m2!1sen!2sin"
+    }
+
+  }
 
   return (
     <AppContext.Provider value={{
       logo, menus, Button, home, indiaData,
       selectedState,
       handleStateChange,
-      cities, Course, courseSelected, spe, handleCourseChange, footer
+      cities, Course, courseSelected, spe, handleCourseChange, about, Links_Address, footer
     }}>
       {children}
     </AppContext.Provider>

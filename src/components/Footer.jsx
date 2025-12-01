@@ -1,42 +1,21 @@
 import { useApp } from "../context/AppContext";
 import { NavLink } from "react-router-dom";
 
-import {
-  BsInstagram,
-  BsFacebook,
-  BsLinkedin,
-  BsTwitter,
-  BsYoutube,
-  BsTelephoneFill,
-  BsEnvelopeFill,
-  BsGlobe
-} from "react-icons/bs";
-
 import "../components/styles/Footer.css";
 
 export default function Footer() {
-  const { footer } = useApp();
-
-  const socialIcons = {
-    instagram: <BsInstagram />,
-    facebook: <BsFacebook />,
-    linkedin: <BsLinkedin />,
-    twitter: <BsTwitter />,
-    youtube: <BsYoutube />
-  };
-
-  const contactIcons = {
-    phone: <BsTelephoneFill />,
-    mail: <BsEnvelopeFill />,
-    globe: <BsGlobe />
-  };
+  const { Links_Address, footer } = useApp();
 
   return (
     <footer className="footer">
       <div className="footer-container">
+
         {/* LEFT */}
         <div className="footer-left">
-         <NavLink to={"/"}> <img src={footer.logo} alt="logo" className="footer-logo" /></NavLink>
+          <NavLink to={"/"}>
+            <img src={footer.logo} alt="logo" className="footer-logo" />
+          </NavLink>
+
           <p className="footer-desc">{footer.description}</p>
 
           <h4 className="footer-title">Quick Links</h4>
@@ -48,8 +27,9 @@ export default function Footer() {
             ))}
           </ul>
 
+          {/* UPDATED SOCIALS */}
           <div className="footer-socials">
-            {footer.socials.map((s, i) => (
+            {Links_Address.socials.map((s, i) => (
               <a
                 key={i}
                 href={s.url}
@@ -57,7 +37,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="footer-social-link"
               >
-                {socialIcons[s.icon]}
+                <s.icon />
               </a>
             ))}
           </div>
@@ -75,15 +55,18 @@ export default function Footer() {
           </ul>
 
           <h4 className="footer-title">Contact Us</h4>
+
+          {/* UPDATED CONTACT ICONS */}
           <ul className="footer-contact">
-            {footer.contact.map((c, i) => (
+            {Links_Address.contact.map((c, i) => (
               <li key={i}>
-                <span className="icon">{contactIcons[c.icon]}</span>
+                <span className="icon"><c.icon /></span>
                 {c.text}
               </li>
             ))}
           </ul>
         </div>
+
       </div>
 
       <div className="footer-bottom">

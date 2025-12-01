@@ -79,6 +79,24 @@
     font-size: 0.9rem;
   }
 }
+@media (max-width: 480px) {
+  .carousel-caption {
+    display: block !important;
+    bottom: 30% !important;
+    text-align: center !important;
+    padding: 0 15px !important;
+  }
+
+  .carousel-caption h1,
+  .carousel-caption h5 {
+    font-size: 1.3rem !important;
+    font-weight: 700;
+  }
+
+  .carousel-caption p {
+    font-size: 0.8rem !important;
+  }
+}
 
 /*--Lead Form--*/
 .Lead-form-div {
@@ -88,6 +106,7 @@
   width: 100%;
   max-width: 600px;
   margin: -180px auto 0 auto;
+  
 
 }
 
@@ -154,9 +173,10 @@
 
   /* Form box fits screen */
   .Lead-form-div {
-    margin: 10px 10px;
+    margin: 10px 0px;
     padding: 20px !important;
     margin-top: -100px;
+  
   }
 
   /* Stack inputs normally */
@@ -405,33 +425,5 @@
 .testimonials-div .swiper {
   overflow: hidden !important;
   padding: 50px 0px;
-}
-
-.advantages-img {
-  text-align: center;
-}
-/* Default: show desktop, hide mobile */
-.adv-img-desktop {
-  display: block;
-}
-
-.adv-img-mobile {
-  display: none !important;
-}
-
-/* Mobile: show mobile image, hide desktop */
-@media (max-width: 768px) {
-  .adv-img-desktop {
-    display: none !important;
-  }
-
-  .adv-img-mobile {
-    display: block !important;
-  }
-}
-.advantages-img img {
-  width: 100%;
-  height: auto;
-  display: block;
 }
 

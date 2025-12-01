@@ -8,8 +8,7 @@ import "swiper/css/pagination";
 import '../components/styles/pages/Home.css';
 import studentDev from '../images/studentDevProgram.png';
 import facultyDev from '../images/facultyDevProgram.png';
-import advantagesImgHorizontal from '../images/admissionshala.png';
-import advantagesImgVertical from '../images/admissionshala_Mob.png';
+import Advantages from "../components/Advantages";
 
 
 export default function Home() {
@@ -381,21 +380,7 @@ export default function Home() {
             <span className="headingPart2"> Admissionshala</span>
           </h2>
           <p className="mb-4 text-center">Below are the reasons to choose Admissionshala</p>
-
-          <div className="advantages-img">
-            <img
-              src={advantagesImgHorizontal}
-              alt="advantages"
-              className="adv-img adv-img-desktop"
-            />
-
-            <img
-              src={advantagesImgVertical}
-              alt="advantages"
-              className="adv-img adv-img-mobile"
-            />
-          </div>
-
+           <Advantages/>
         </div>
       </section>
 
