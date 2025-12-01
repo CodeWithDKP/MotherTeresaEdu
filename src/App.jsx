@@ -1,10 +1,12 @@
 import AppRouter from './router/AppRouter';
 import { AppProvider } from './context/AppContext';
-
+import ErrorBoundary from './components/ErrorBoundary';
 export default function App() {
   return (
     <AppProvider>
-      <AppRouter />
+      <ErrorBoundary>
+        <AppRouter />
+      </ErrorBoundary>
     </AppProvider>
   );
 }

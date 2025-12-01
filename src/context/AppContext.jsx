@@ -321,13 +321,36 @@ export const AppProvider = ({ children }) => {
     }
 
   }
-
+  const Team = {
+    teamData: [
+      {
+        img: institute_1,
+        name: "Rahul Sharma",
+        role: "Founder & CEO",
+      },
+      {
+        img: institute_2,
+        name: "Priya Nair",
+        role: "Academic Head",
+      },
+      {
+        img: institute_3,
+        name: "Amit Verma",
+        role: "Counsellor",
+      },
+       {
+        img: institute_4,
+        name: "Amit Verma",
+        role: "Counsellor",
+      }
+    ]
+  }
   return (
     <AppContext.Provider value={{
       logo, menus, Button, home, indiaData,
       selectedState,
       handleStateChange,
-      cities, Course, courseSelected, spe, handleCourseChange, about, Links_Address, footer
+      cities, Course, courseSelected, spe, handleCourseChange, about,Team, Links_Address, footer
     }}>
       {children}
     </AppContext.Provider>

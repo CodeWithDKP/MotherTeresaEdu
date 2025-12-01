@@ -1,0 +1,54 @@
+/* -- team section -- */
+.team-card-box {
+  display: flex;
+  justify-content: left;
+  height: 100%;
+}
+
+.team-card {
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+  background: #fff;
+  transition: transform .25s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-6px);
+}
+
+.team-card img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+    
+  border-bottom-right-radius: 60px !important; 
+}
+
+.custom-bullet {
+  display: inline-block;
+  background: #f8880c;
+  opacity: 0.35;
+  border-radius: 50%;
+}
+
+.custom-bullet-active {
+  opacity: 1;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  .custom-bullet {
+    width: 6px !important;
+    height: 6px !important;
+  }
+
+  .team-card img {
+    height: 350px;
+  }
+}
+
+.team-container .swiper {
+  overflow: hidden;
+  padding-bottom: 18px;
+}
