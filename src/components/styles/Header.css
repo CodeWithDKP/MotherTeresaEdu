@@ -36,7 +36,6 @@
     height: 50px;
   }
 
-
   .nav-link {
     font-size: 1rem;
     padding: 6px 0;
@@ -45,12 +44,13 @@
 
   .nav-link::after {
     bottom: 5px;
-    
+
   }
+
   .nav-link:hover::after,
-.nav-link.active::after {
-  width: 12%;
-  margin-left: 0px;
-}
+  .nav-link.active::after {
+    width: 12%;
+    margin-left: 0px;
+  }
 
 }

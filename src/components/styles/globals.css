@@ -26,12 +26,10 @@ p {
 
 .headingHero1 {
   color: #f77a0c !important;
-
 }
 
 .headingHero2 {
   color: #ffffff !important;
-
 }
 
 /*--HeroBanner--*/
@@ -57,7 +55,6 @@ p {
   position: relative;
   z-index: 2;
   max-width: 700px;
-
 }
 
 .hero-text h2 {
@@ -130,15 +127,10 @@ p {
   .adv-img-mobile {
     display: block !important;
   }
-
-  /*
-  body,
+  /*body,
   html {
     overflow-x: hidden !important;
-  }
-
-*/
-
+  }*/
 }
 
 @media (max-width: 480px) {
@@ -161,6 +153,4 @@ p {
     font-size: 14px !important;
     text-align: start;
   }
-
-
 }

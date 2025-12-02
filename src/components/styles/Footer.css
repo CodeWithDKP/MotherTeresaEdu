@@ -1,12 +1,10 @@
 .footer {
     background: #083b5c;
     color: #ffffff;
-
 }
 
 .footer-container {
-    width: auto;
-    
+    width: auto;   
     margin: auto;
     margin-left: 20%;
     display: flex;
@@ -83,11 +81,9 @@
     color: inherit;
 }
 
-/* On mobile align all items left */
 @media (max-width: 768px) {
     .footer-container{
         padding: 50px;
-        margin-left: 10px;
-        
+        margin-left: 10px;     
     }
 }
