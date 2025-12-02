@@ -110,7 +110,7 @@ export default function About() {
 
                 <p className="fw-bold">Vision and Mission page:</p>
 
-                <ol>
+                <ol className="about-list">
                   <li>
                     <b>Vision:</b> To aid a one-stop admission process solution for students to save their
                     valuable time, money, and efforts for a good college search.
