@@ -307,17 +307,17 @@ export const AppProvider = ({ children }) => {
     ],
 
     contact: [
-      { icon: BsTelephoneFill, text: "+91 98765 43210" },
+      { icon: BsTelephoneFill, text: "+91 88857 727716" },
       { icon: BsEnvelopeFill, text: "support@yourdomain.com" },
-      { icon: BsGeoAltFill, text: "M-1005, City Avenue, Wakad, Pune - 411057" }
+      { icon: BsGeoAltFill, text: "Ananthapuramu - 515001. A.P." }
     ],
 
     branchOffice: {
       icon: BsGeoAltFill,
-      address: "UG-24, Jaipur Electronic Market, Riddhi–Siddhi, Gopalpura, Jaipur - 302018"
+      address: "Sri Skanda Residency, Dwaraka (Chalama Reddy), IOC Petrol Bunk Backside, Opp.Sri Chaitanya Junior Collage, Near RTC Bus Stan, Ananthapuramu - 515001, A.P."
     },
     map: {
-      embedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2843.788852872656!2d77.60893166791742!3d14.6500319068576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb14baaabd2e5f5%3A0xf81d6ad4f85396ec!2sJNTUA%20Administrative%20block!5e0!3m2!1sen!2sin!4v1764588297831!5m2!1sen!2sin"
+      embedUrl: "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d899.6066063852431!2d77.60121168303333!3d14.68651808772237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sin!4v1764646362318!5m2!1sen!2sin"
     }
 
   }
