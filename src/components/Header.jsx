@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { useApp } from "../context/AppContext";
-import "../components/styles/header.css";
+import '../components/styles/Header.css';
 
 export default function Header() {
   const { logo, menus } = useApp();
