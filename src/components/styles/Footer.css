@@ -3,87 +3,122 @@
     color: #ffffff;
 }
 
+/* MAIN CONTAINER */
 .footer-container {
-    width: auto;   
+    width: auto;
     margin: auto;
-    margin-left: 20%;
+    margin-left: 15%;
     display: flex;
     justify-content: space-between;
-    gap: 40px;
+    gap: 20px;
     flex-wrap: wrap;
-    padding: 50px 0 50px;
+    padding: 50px 0 20px;
 }
 
+/* LEFT + RIGHT */
 .footer-left,
 .footer-right {
     flex: 1;
     min-width: 300px;
 }
 
+/* LOGO */
 .footer-logo {
-    width: auto;
-    height: auto;
+    height: 100px;
+    width: 200px;
     margin-bottom: 15px;
 }
 
+/* TEXT */
 .footer-desc {
     font-size: 16px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     line-height: 1.5;
+    max-width: 500px;
 }
 
+/* HEADINGS */
 .footer-title {
     font-size: 25px;
     margin-bottom: 15px;
     font-weight: 600;
 }
 
-.footer-links,
-.footer-contact {
+/* QUICK LINKS → MAKE HORIZONTAL */
+.footer-links {
     list-style: none;
     padding: 0;
-    margin: 0 0 25px;
+    margin: 0 0 10px;
+
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
-.footer-links li,
-.footer-contact li {
-    font-size: 18px;
-    margin-bottom: 14px;
+.footer-links li {
+    font-size: 16px;
     cursor: pointer;
+    margin-bottom: 0;
 }
 
-.footer-socials span {
-    font-size: 22px;
+/* SOCIALS */
+.footer-socials a {
     margin-right: 15px;
+    font-size: 22px;
     cursor: pointer;
+}
+
+/* CONTACT RIGHT SIDE → CLEAN & SPACED */
+.footer-contact {
+    font-size: 16px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+    margin-right: 30%;
+}
+
+.footer-contact li {
+    margin-bottom: 14px;
+    display: flex;
+    align-items: flex-start;
 }
 
 .footer-contact .icon {
     margin-right: 12px;
-    font-size: 16px;
-}
-.footer-socials a{
-    margin-left: 10px;
+    font-size: 18px;
+    line-height: 1;
 }
 
+/* FOOTER BOTTOM */
 .footer-bottom {
     text-align: center;
-    font-size: 18px;
+    font-size: 16px;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
     padding: 15px 0 15px;
     background-color: black;
 }
 
-/* Remove underline */
+/* LINKS NO UNDERLINE */
 .footer-link,
 .footer-social-link {
     text-decoration: none;
-    color: inherit;
+    color: white;
 }
 
+.footer-link :hover,
+.footer-social-link :hover {
+    color: #f77a0c;
+}
+
+/* RESPONSIVE */
 @media (max-width: 768px) {
-    .footer-container{
+    .footer-container {
         padding: 50px;
-        margin-left: 10px;     
+        margin-left: 10px;
+    }
+
+    .footer-links {
+        justify-content: flex-start;
     }
 }

@@ -19,14 +19,14 @@ export default function Team() {
 
       <section className="team-section bg-white py-5">
         <div className="container team-container">
-
           <h2 className="mb-3 fw-bold text-center">
             <span className="headingPart1">Meet Our</span>
             <span className="headingPart2"> Team</span>
           </h2>
 
-          <p className="mb-4 text-center">Our dedicated experts who make everything possible.</p>
-
+          <p className="mb-4 text-center">
+            Our passionate and dedicated educators and staff who strive to make quality education accessible to every student.
+          </p>
           <Swiper
             modules={[Pagination]}
             spaceBetween={24}

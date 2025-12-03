@@ -1,6 +1,6 @@
 import { useApp } from "../context/AppContext";
 import { NavLink } from "react-router-dom";
-import { useState } from "react"
+import { useState, useEffect, useRef } from "react"
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
@@ -10,12 +10,13 @@ import studentDev from '../images/studentDevProgram.png';
 import facultyDev from '../images/facultyDevProgram.png';
 import Advantages from "../components/Advantages";
 
-
 export default function Home() {
   const { Button, home, indiaData,
     selectedState,
     handleStateChange,
-    cities, Course, courseSelected, spe, handleCourseChange, } = useApp();
+    cities } = useApp();
+
+  const swiperRef = useRef(null);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -29,31 +30,34 @@ export default function Home() {
     console.log("Form Submitted:", data);
     form.reset();
   };
-  //why admissionshala state
+  //why Mother teresa edu foundation state
   const [showMore, setShowMore] = useState(false);
+  useEffect(() => {
+    const el = document.getElementById("heroCarousel");
+    if (!el || !window.bootstrap) return;
 
+    const existing = window.bootstrap.Carousel.getInstance(el);
+    if (existing) existing.dispose();
+
+    new window.bootstrap.Carousel(el, {
+      interval: 3000,
+      ride: "carousel"
+    });
+  }, []);
+
+  console.log(window.bootstrap);
 
   return (
 
     <>
       <section className="hero-section">
-        <div id="heroCarousel" className="carousel slide" data-bs-ride="carousel">
-          {/* INDICATORS
-          <div className="carousel-indicators">
-            {home.hero.map((_, i) => (
-              <button
-                key={i}
-                type="button"
-                data-bs-target="#heroCarousel"
-                data-bs-slide-to={i}
-                className={i === 0 ? "active" : ""}
-                aria-label={`Slide ${i + 1}`}
-                aria-current={i === 0 ? "true" : undefined}
-              ></button>
-            ))}
-          </div>
- */}
-          {/* SLIDES */}
+        <div
+          id="heroCarousel"
+          className="carousel slide"
+          data-bs-ride="carousel"
+          data-bs-wrap="true"
+          data-bs-pause="false"
+        >
           <div className="carousel-inner">
             {home.hero.map((slide, i) => (
               <div
@@ -93,7 +97,7 @@ export default function Home() {
       </section>
 
 
-      <section className="lead-form-container bg-white p-5">
+      <section className="lead-form-container p-5">
         <div className="Lead-form-div bg-white p-3 rounded-3" id="form">
 
           <form onSubmit={handleSubmit} className="lead-form">
@@ -113,6 +117,7 @@ export default function Home() {
               className="input"
               required
             />
+
             <div className="mobile-row">
               <span className="code">+91</span>
               <input
@@ -126,6 +131,7 @@ export default function Home() {
               />
             </div>
 
+            {/* ⬇ KEEP STATE + CITY SELECTS */}
             <div className="two-col">
               <select
                 name="state"
@@ -152,29 +158,23 @@ export default function Home() {
               </select>
             </div>
 
-            <select
+            {/* ⬇ COURSE changed to TEXT INPUT */}
+            <input
               name="course"
-              value={courseSelected}
-              onChange={(e) => handleCourseChange(e.target.value)}
+              type="text"
+              placeholder="Enter Course Looking For *"
               className="input"
               required
-            >
-              <option value="">Select Course Looking For *</option>
-              {Object.keys(Course).map((course) => (
-                <option key={course} value={course}>{course}</option>
-              ))}
-            </select>
+            />
 
-            <select
+            {/* ⬇ SPECIALIZATION changed to TEXT INPUT */}
+            <input
               name="specialization"
+              type="text"
+              placeholder="Enter Specialization Looking For *"
               className="input"
               required
-            >
-              <option value="">Select Specialization Looking For *</option>
-              {spe.map((item) => (
-                <option key={item} value={item}>{item}</option>
-              ))}
-            </select>
+            />
 
             <label className="consent-row">
               <input name="consent" type="checkbox" required />
@@ -187,72 +187,49 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="whyAdmissionshala-section bg-white">
-        <div className="container whyAdmissionshala ">
+      <section className="whyMotherTeresa-section">
+        <div className="container whyMotherTeresa">
 
           <NavLink to="/about" className="text-decoration-none">
             <h2 className="text-center mb-4 fw-bold">
-              <span className="headingPart1">Why</span> <span className="headingPart2">Admissionshala?</span>
+              <span className="headingPart1">Why</span> <span className="headingPart2">Mother Teresa Educational Foundation?</span>
             </h2>
           </NavLink>
           <div className={showMore ? "full-text" : "clamped-text"}>
             <p>
-              “It is not about how hard you work but it is about how smartly you manage your time,
-              resources, mind, and efforts to work together for a better result”.– Anonymous.
+              “Education is the most powerful weapon which you can use to change the world.” – Nelson Mandela.
             </p>
 
             <p>
-              In the present era, time is money, and to value your money and efforts, we bring forth
-              admissionshala.com, an <b>admission consultant in Pune, Maharashtra</b>.
-              We are an extraordinarily selective digital platform fabricated specially for aspiring
-              students to counsel, guide, and help in career mapping.
+              At <b>Mother Teresa Educational Foundation, Ananthapuramu, Andhra Pradesh</b>, we are committed to providing quality education and holistic development for students. Our mission is to guide young minds in choosing the right career paths and achieving their full potential.
             </p>
 
             <p>
-              Making a career choice can be challenging for both parents and students. The absence of
-              the right source of information may lead to making the wrong decision. With our 14+ years
-              of experience in education counseling and career mapping, we aim to clear all the queries
-              circling around admissions. We clarify doubts and make education easy with the following
-              offerings:
+              Choosing the right educational path can be overwhelming for both students and parents. With our dedicated team of experienced educators and counselors, we help clarify doubts and provide accurate information to make informed decisions.
             </p>
 
             <p>
-              Admissionshala.com follows a student-oriented approach. We comprehend students’ profiles
-              and expectations and then conduct a well-framed process of vocational guidance, counseling,
-              and career mapping.
+              Our student-centered approach focuses on understanding individual strengths and aspirations, followed by personalized guidance, mentorship, and career planning.
             </p>
 
             <p>
-              The Research and Development team of admissionshala.com conducts profound research and
-              data-driven analysis of various colleges & universities and brings valuable and sorted
-              insights including the inside story of colleges that eventually saves your time and resources.
+              The Research and Development team at Mother Teresa Educational Foundation performs in-depth research on schools, colleges, courses, and career opportunities. This ensures that students receive reliable, structured, and time-saving insights.
             </p>
 
             <p>
-              We follow a Common Application Process (CAP) where students can apply at numerous colleges
-              all at once which will offer a hassle-free, time-saving, and snappier user experience. Our
-              experienced college admission counselors have your back till the completion of the process.
+              We assist students through a smooth application process, ensuring a hassle-free experience from admission counseling to final enrollment. Our counselors are available throughout the journey to provide continuous support.
             </p>
 
             <p>
-              Since we are into education for the last 14 years, we have a strong association with the
-              alumni of pioneering tier-1 colleges like XLRI, Symbiosis, IIMs, NIT, and WeSchool. With
-              their support, we host mock interviews & GD sessions, which increase the chances of
-              selection.
+              With strong associations with alumni and professionals from top institutions, we organize workshops, mock interviews, and guidance sessions that enhance student readiness and confidence.
             </p>
 
             <p>
-              Admissionshala likewise has a solid association with 10000+ alumni and hence it becomes
-              easier for us to assist you in getting great summer internships and final placement
-              opportunities in top companies.
+              Our foundation also maintains close connections with previous students, helping new students gain internships, mentorship, and placement opportunities.
             </p>
 
             <p>
-              To sum up, Admissionshala secures the top position in the <b>list of admission consultants in India</b>,
-              and it is the best portal for multiple admission and placement-related questions. We keep
-              you updated with the newest developments about institutes, scholarships, and student
-              programs. With the help of our certified <b>college admissions consultant</b>, we ensure the
-              experience is more human, even in digital proximity.
+              In summary, <b>Mother Teresa Educational Foundation</b> in Ananthapuramu stands as a trusted and reliable educational institution, guiding students towards academic excellence and meaningful career growth. We stay committed to keeping students informed about the latest developments, scholarships, and programs for holistic growth.
             </p>
           </div>
 
@@ -264,7 +241,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="courses-section bg-white py-5">
+      <section className="courses-section py-5">
         <div className="container-fluid courses-container px-3">
 
           <div className="row justify-content-center gap-4">
@@ -297,15 +274,12 @@ export default function Home() {
           <NavLink to={"/contact"} className="text-decoration-none">
             <h2 className="mb-4 fw-bold text-center">
               <span className="headingPart1">Development</span>
-              <span className="headingPart2"> Program</span>
+              <span className="headingPart2"> Programs</span>
             </h2>
           </NavLink>
-          
-
           <p className="mb-5 text-center">
-            Engage with the best of both Faculty and Industry experts to expand your horizons with our development programs
+            Engage with experienced educators and industry experts to enhance skills and knowledge through our specialized development programs.
           </p>
-
           <div className="row row-cols-1 row-cols-lg-2 gy-4 gx-5 mt-2 mb-5">
             <div className="col">
               <div
@@ -314,11 +288,13 @@ export default function Home() {
               >
                 <div className="content-box">
                   <h4>Student Development Program</h4>
-                  <p>Learn from India’s best Faculty and Industrialists in order to add that only Feather to your Intellectual Hat. <NavLink to={"/contact"} style={{color:"black"}} className="text-decoration-none">Enroll Now!</NavLink></p>
+                  <p>
+                    Learn from our expert faculty and industry professionals to build skills, confidence, and academic excellence.{" "}
+                    <NavLink to={"/contact"} style={{ color: "black" }} className="text-decoration-none">Enroll Now!</NavLink>
+                  </p>
                 </div>
               </div>
             </div>
-
             <div className="col">
               <div
                 className="program-card rounded-3 d-flex align-items-center justify-content-center text-center"
@@ -326,7 +302,10 @@ export default function Home() {
               >
                 <div className="content-box">
                   <h4>Faculty Development Program</h4>
-                  <p>Current trends in all education fields can only be justified by the best of the faculty. <NavLink to={"/contact"} style={{color:"#f77a0c"}} className="text-decoration-none">Enroll</NavLink> for our Faculty Development Program to cater all current student needs.</p>
+                  <p>
+                    Equip faculty with the latest teaching methodologies and educational trends to better guide students.{" "}
+                    <NavLink to={"/contact"} style={{ color: "#f77a0c" }} className="text-decoration-none">Enroll</NavLink> in our Faculty Development Program today.
+                  </p>
                 </div>
               </div>
             </div>
@@ -334,7 +313,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="ranked-section bg-white py-5">
+      <section className="ranked-section py-5">
         <div className="container ranked-container">
           <h2 className="mb-3 fw-bold text-center">
             <span className="headingPart1">Top Ranked</span>
@@ -373,14 +352,14 @@ export default function Home() {
       </section>
 
 
-      <section className="advantages-section bg-white py-5" >
+      <section className="advantages-section py-5" >
         <div className="container advantages-container">
           <h2 className="mb-4 fw-bold text-center">
             <span className="headingPart1">Advantages of</span>
             <span className="headingPart2"> Admissionshala</span>
           </h2>
           <p className="mb-4 text-center">Below are the reasons to choose Admissionshala</p>
-           <Advantages/>
+          <Advantages />
         </div>
       </section>
 
@@ -408,30 +387,33 @@ export default function Home() {
               768: { slidesPerView: 2 },
               992: { slidesPerView: 3 },
             }}
+            onSwiper={(swiper) => (swiperRef.current = swiper)}
             style={{ paddingBottom: 36 }}
           >
-            {home.testimonials.map((item, i) => (
-              <SwiperSlide key={i} className="testimonial-slide">
 
-                <div className="testCards">
-                  {/* Floating Image */}
+
+            {home.testimonials.map((item, i) => (
+              <SwiperSlide
+                key={i}
+                className="testimonial-slide"
+              >
+                <div
+                  className="testCards"
+                  onMouseEnter={() => swiperRef.current.autoplay.stop()}
+                  onMouseLeave={() => swiperRef.current.autoplay.start()}
+                >
                   <div className="testmonialImg-div">
-                    <img
-                      src={item.img}
-                      className="testimonial-img"
-                      alt={item.name}
-                    />
+                    <img src={item.img} className="testimonial-img" />
                   </div>
 
-                  {/* Card */}
                   <div className="testimonial-card p-4 bg-white rounded-3">
                     <div className="quote-symbol">“</div>
                     <p className="mt-2">{item.review}</p>
                     <h5 className="fw-bold mt-3 text-end">{item.name}</h5>
                   </div>
                 </div>
-
               </SwiperSlide>
+
             ))}
           </Swiper>
 

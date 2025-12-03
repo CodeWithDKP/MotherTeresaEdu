@@ -45,18 +45,7 @@ export default function Footer() {
 
         {/* RIGHT */}
         <div className="footer-right">
-          <h4 className="footer-title">Quick Links</h4>
-          <ul className="footer-links">
-            {footer.rightLinks.map((item, i) => (
-              <li key={i}>
-                <NavLink to={item.path} className="footer-link">{item.name}</NavLink>
-              </li>
-            ))}
-          </ul>
-
           <h4 className="footer-title">Contact Us</h4>
-
-          {/* UPDATED CONTACT ICONS */}
           <ul className="footer-contact">
             {Links_Address.contact.map((c, i) => (
               <li key={i}>
