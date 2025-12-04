@@ -3,7 +3,7 @@ import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import HeroBanner from '../components/HeroBanner';
-import teamHero from '../images/teamHero.jpg';
+import teamHero from '../images/teamHero.webp';
 import { useApp } from '../context/AppContext';
 import '../components/styles/pages/Team.css';
 export default function Team() {

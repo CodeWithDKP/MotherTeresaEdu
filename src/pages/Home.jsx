@@ -402,7 +402,7 @@ export default function Home() {
                   onMouseEnter={() => swiperRef.current.autoplay.stop()}
                   onMouseLeave={() => swiperRef.current.autoplay.start()}
                 >
-                  <div className="testmonialImg-div">
+                  <div className="testmonialImg-div mt-4">
                     <img src={item.img} className="testimonial-img" />
                   </div>
 
