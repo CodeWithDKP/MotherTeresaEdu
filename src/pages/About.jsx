@@ -191,7 +191,7 @@ export default function About() {
         <div className="container advantages-container">
           <h2 className="mb-4 fw-bold text-center">
             <span className="headingPart1">Advantages of</span>
-            <span className="headingPart2"> Admissionshala</span>
+            <span className="headingPart2"> Mother Teresa Educational Foundation</span>
           </h2>
           <Advantages />
         </div>
