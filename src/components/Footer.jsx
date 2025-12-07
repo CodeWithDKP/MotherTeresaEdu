@@ -11,24 +11,39 @@ export default function Footer() {
       <div className="footer-container">
 
         {/* LEFT */}
-        <div className="footer-left">
-          <NavLink to={"/"}>
+        <div className="footer-left ">
+          <div className="mb-4">
+            <NavLink to={"/"}>
             <img src={footer.logo} alt="logo" className="footer-logo" />
           </NavLink>
+          </div>
 
-          <p className="footer-desc">{footer.description}</p>
+          <div className="mb-4"><p className="footer-desc">{footer.description}</p></div>
 
           <h4 className="footer-title">Quick Links</h4>
-          <ul className="footer-links">
+          <div className="mb-4">
+            <ul className="footer-links">
             {footer.leftLinks.map((item, i) => (
               <li key={i}>
                 <NavLink to={item.path} className="footer-link">{item.name}</NavLink>
               </li>
             ))}
           </ul>
+          </div>
+        </div>
 
-          {/* UPDATED SOCIALS */}
-          <div className="footer-socials">
+        {/* RIGHT */}
+        <div className="footer-right">
+          <h4 className="footer-title mb-4">Contact Us</h4>
+          <ul className="footer-contact">
+            {Links_Address.contact.map((c, i) => (
+              <li key={i} className="mb-4">
+                <span className="icon"><c.icon /></span>
+                {c.text}
+              </li>
+            ))}
+          </ul>
+          <div className="footer-socials ms-1">
             {Links_Address.socials.map((s, i) => (
               <a
                 key={i}
@@ -41,19 +56,6 @@ export default function Footer() {
               </a>
             ))}
           </div>
-        </div>
-
-        {/* RIGHT */}
-        <div className="footer-right">
-          <h4 className="footer-title">Contact Us</h4>
-          <ul className="footer-contact">
-            {Links_Address.contact.map((c, i) => (
-              <li key={i}>
-                <span className="icon"><c.icon /></span>
-                {c.text}
-              </li>
-            ))}
-          </ul>
         </div>
 
       </div>

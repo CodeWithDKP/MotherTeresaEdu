@@ -51,19 +51,21 @@ export default function Contact() {
             <div className="col-lg-6 pe-lg-5">
               <h3 className="fw-bold mb-4 text-center text-lg-start">
                 <span className="headingPart1">Our</span>{" "}
-                <span className="headingPart2">Offices</span>
+                <span className="headingPart2">Office</span>
               </h3>
 
               <div className="mb-5">
-                <h6 className="fw-bold">CORPORATE OFFICE:</h6>
+                <h6 className="fw-bold mb-4">CORPORATE OFFICE:</h6>
 
                 {Links_Address.contact.map((item, index) => {
                   const Icon = item.icon;
                   return (
-                    <p className={index === 2 ? "mb-4" : "mb-2"} key={index}>
-                      <Icon className="me-2" />
-                      {item.text}
-                    </p>
+                    <div className="mb-4">
+                      <p className={index === 2 ? "mb-4" : "mb-2"} key={index}>
+                        <Icon className="me-2" />
+                        {item.text}
+                      </p>
+                    </div>
                   );
                 })}
               </div>
@@ -93,8 +95,8 @@ export default function Contact() {
                 })}
               </div>
 
-              <h6 className="fw-bold mb-3">Find Us on Map:</h6>
-              <div className="rounded-3 overflow-hidden" style={{ height: "200px" }}>
+              <h6 className="fw-bold mb-2">Find Us on Map:</h6>
+              <div className="rounded-3 overflow-hidden" style={{ height: "150px" }}>
                 <iframe
                   src={Links_Address.map.embedUrl}
                   width="100%"
