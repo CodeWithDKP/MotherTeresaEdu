@@ -244,7 +244,7 @@ export default function Home() {
       <section className="courses-section py-5">
         <div className="container-fluid courses-container px-3">
 
-          <div className="row justify-content-center gap-4">
+          <div className="row justify-content-center gap-5">
             {home.courses.map((card, index) => (
               <div
                 key={index}

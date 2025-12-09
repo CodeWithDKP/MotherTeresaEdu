@@ -47,6 +47,11 @@ import {
   BsEnvelopeFill,
   BsGeoAltFill
 } from "react-icons/bs";
+//team
+import avatar1 from "../images/avatar1.jpg";
+import avatar2 from "../images/avatar2.jpg";
+import avatar3 from "../images/avatar3.jpg";
+import avatar4 from "../images/avatar4.jpg";
 
 const AppContext = createContext();
 
@@ -1403,30 +1408,25 @@ export const AppProvider = ({ children }) => {
 
     courses: [
       {
-        title: "Managment",
+        title: "MANAGEMENT",
         list: ["PGMD", "MBA", "BBA", "BMS"],
         img: managment,
       },
       {
-        title: "Managment",
-        list: ["PGMD", "MBA", "BBA", "BMS"],
+        title: "ENGINEERING",
+        list: ["B.E/B.Tech", "M.E/M.Tech"],
         img: engineering,
       },
       {
-        title: "Managment",
-        list: ["PGMD", "MBA", "BBA", "BMS"],
+        title: "MEDICAL",
+        list: ["MBBS", "BDS", "BAMS", "BHMS","MS","MD"],
         img: medical,
       },
       {
-        title: "Managment",
-        list: ["PGMD", "MBA", "BBA", "BMS"],
+        title: "STUDAY ABROAD",
+        list: ["Medical", "Managament", "Engineering"],
         img: abroad,
-      },
-      {
-        title: "Managment",
-        list: ["PGMD", "MBA", "BBA", "BMS"],
-        img: distance,
-      },
+      }
     ],
     rankedInstitutes: [
       {
@@ -1570,7 +1570,7 @@ export const AppProvider = ({ children }) => {
     ],
 
     contact: [
-      { icon: BsTelephoneFill, text: "+91 88857 727716" },
+      { icon: BsTelephoneFill, text: "+91 88857 727716 & +91 63035 11233" },
       { icon: BsEnvelopeFill, text: "support@yourdomain.com" },
       { icon: BsGeoAltFill, text: "Sri Skanda Residency, Dwaraka (Chalama Reddy), IOC Petrol Bunk Backside, Opp.Sri Chaitanya Junior Collage, Near RTC Bus Stan, Ananthapuramu - 515001, A.P." }
     ],
@@ -1583,23 +1583,23 @@ export const AppProvider = ({ children }) => {
   const Team = {
     teamData: [
       {
-        img: auro,
+        img: avatar1,
         name: "Rahul Sharma",
         role: "Founder & CEO",
       },
       {
-        img: auro,
-        name: "Priya Nair",
+        img: avatar2,
+        name: "Namesh",
         role: "Academic Head",
       },
       {
-        img: auro,
+        img: avatar3,
         name: "Amit Verma",
         role: "Counsellor",
       },
       {
-        img: auro,
-        name: "Amit Verma",
+        img: avatar4,
+        name: "Jaya Simha",
         role: "Counsellor",
       }
     ]
