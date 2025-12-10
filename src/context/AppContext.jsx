@@ -28,6 +28,48 @@ import pgmd from '../images/institutes/pgmd.png'
 import rcm from '../images/institutes/rcm.jpg'
 import sbs from '../images/institutes/sbs.jpg'
 
+//clients chennai
+import AMRITA from "../images/chennai/AMRITA.jpg";
+import ARJUN from "../images/chennai/ARJUN.jfif";
+import DLM from "../images/chennai/DLM.jfif";
+import hindustan from "../images/chennai/hindustan.webp";
+import JANSHON from "../images/chennai/JANSHON.jfif";
+import ku from "../images/chennai/ku.jfif";
+import mgr from "../images/chennai/mgr.jfif";
+import RMK from "../images/chennai/RMK.jpg";
+import SATHYABAMA from "../images/chennai/SATHYABAMA.jfif";
+import SAVITHA from "../images/chennai/SAVITHA.jfif";
+import SRM from "../images/chennai/SRM.jpg";
+import SSN from "../images/chennai/SSN.jpg";
+import TU from "../images/chennai/TU.jfif";
+import VELTECH from "../images/chennai/VELTECH.jfif";
+import vit from "../images/chennai/vit.jpg";
+
+//banglore
+import ACHARYA from "../images/BANGLOE/ACHARYA.jfif";
+import ATRIA from "../images/BANGLOE/ATRIA.jfif";
+import AU from "../images/BANGLOE/AU.jfif";
+import BGS from "../images/BANGLOE/BGS.jfif";
+import BMSC from "../images/BANGLOE/BMSC.jfif";
+import BMSIT from "../images/BANGLOE/BMSIT.jfif";
+import BRINDAVAN from "../images/BANGLOE/BRINDAVAN.jfif";
+import CHRIST from "../images/BANGLOE/CHRIST.avif";
+import CMR from "../images/BANGLOE/CMR.jfif";
+import DS from "../images/BANGLOE/DS.jfif";
+import GARDEN from "../images/BANGLOE/GARDEN.jfif";
+import HKBKBNG from "../images/BANGLOE/HKBKBNG.jfif";
+import IMPACT from "../images/BANGLOE/IMPACT.jfif";
+import JAINCOLLGE from "../images/BANGLOE/JAINCOLLGE.jfif";
+import MS from "../images/BANGLOE/MS.jfif";
+import NAGARJUNA from "../images/BANGLOE/NAGARJUNA.jfif";
+import NH from "../images/BANGLOE/NH.jfif";
+import NIITMEENAKSHI from "../images/BANGLOE/NIITMEENAKSHI.jfif";
+import PES from "../images/BANGLOE/PES.jfif";
+import REVA from "../images/BANGLOE/REVA.jfif";
+import RV from "../images/BANGLOE/RV.jfif";
+import SJCIT from "../images/BANGLOE/SJCIT.jfif";
+import UNCMR from "../images/BANGLOE/UNCMR.jfif";
+
 //testimonials
 import at_1 from '../images/at_1.png'
 import at_2 from '../images/at_2.jpg'
@@ -1419,7 +1461,7 @@ export const AppProvider = ({ children }) => {
       },
       {
         title: "MEDICAL",
-        list: ["MBBS", "BDS", "BAMS", "BHMS","MS","MD"],
+        list: ["MBBS", "BDS", "BAMS", "BHMS", "MS", "MD"],
         img: medical,
       },
       {
@@ -1606,86 +1648,44 @@ export const AppProvider = ({ children }) => {
   }
   const ourClients = {
     clients: [
-      {
-        img: auro,
-        name: "Auro University",
-        place: "Surat"
-      },
-      {
-        img: auro,
-        name: "Green Valley Institute of Technology",
-        place: "Bengaluru, Karnataka"
-      },
-      {
-        img: auro,
-        name: "National Science & Research Academy",
-        place: "Chennai, Tamil Nadu"
-      },
-      {
-        img: auro,
-        name: "Horizon Business School",
-        place: "Pune, Maharashtra"
-      },
-      {
-        img: auro,
-        name: "Sunrise Engineering College",
-        place: "Hyderabad, Telangana"
-      },
-      {
-        img: auro,
-        name: "Green Valley Institute of Technology",
-        place: "Bengaluru, Karnataka"
-      },
-      {
-        img: auro,
-        name: "National Science & Research Academy",
-        place: "Chennai, Tamil Nadu"
-      },
-      {
-        img: auro,
-        name: "Horizon Business School",
-        place: "Pune, Maharashtra"
-      },
-      {
-        img: auro,
-        name: "Sunrise Engineering College",
-        place: "Hyderabad, Telangana"
-      },
-      {
-        img: auro,
-        name: "Green Valley Institute of Technology",
-        place: "Bengaluru, Karnataka"
-      },
-      {
-        img: auro,
-        name: "National Science & Research Academy",
-        place: "Chennai, Tamil Nadu"
-      },
-      {
-        img: auro,
-        name: "Horizon Business School",
-        place: "Pune, Maharashtra"
-      },
-      {
-        img: auro,
-        name: "Sunrise Engineering College",
-        place: "Hyderabad, Telangana"
-      },
-      {
-        img: auro,
-        name: "Green Valley Institute of Technology",
-        place: "Bengaluru, Karnataka"
-      },
-      {
-        img: auro,
-        name: "National Science & Research Academy",
-        place: "Chennai, Tamil Nadu"
-      },
-      {
-        img: auro,
-        name: "Horizon Business School",
-        place: "Pune, Maharashtra"
-      }
+      { img: vit, name: "VIT", place: "Chennai" },
+      { img: AMRITA, name: "AMRITA", place: "Chennai" },
+      { img: SRM, name: "SRM", place: "Chennai" },
+      { img: RMK, name: "RMK", place: "Chennai" },
+      { img: SSN, name: "SSN", place: "Chennai" },
+      { img: hindustan, name: "HINDUSTAN", place: "Chennai" },
+      { img: VELTECH, name: "VELTECH", place: "Chennai" },
+      { img: JANSHON, name: "JANSHON", place: "Chennai" },
+      { img: mgr, name: "MGR DEEMED TO BE UNIVERSITY", place: "Chennai" },
+      { img: DLM, name: "DHANALAKSHMI UNIVERSITY", place: "Chennai" },
+      { img: SAVITHA, name: "SAVITHA", place: "Chennai" },
+      { img: SATHYABAMA, name: "SATHYABAMA", place: "Chennai" },
+      { img: ARJUN, name: "ARJUN", place: "Chennai" },
+      { img: ku, name: "KALASALINGAM UNIVERSITY", place: "Chennai" },
+      { img: TU, name: "TAKSHASHILA UNIVERSITY", place: "Chennai" },
+      { img: RV, name: "RV", place: "Bangalore" },
+      { img: BMSC, name: "BMSC", place: "Bangalore" },
+      { img: BMSIT, name: "BMSIT", place: "Bangalore" },
+      { img: MS, name: "M S RAMAIAH", place: "Bangalore" },
+      { img: PES, name: "PES", place: "Bangalore" },
+      { img: CHRIST, name: "CHRIST", place: "Bangalore" },
+      { img: DS, name: "DAYANANDA SAGAR", place: "Bangalore" },
+      { img: NH, name: "NEW HORIZON", place: "Bangalore" },
+      { img: AU, name: "ALLIANCE UNIVERSITY", place: "Bangalore" },
+      { img: HKBKBNG, name: "HKBK", place: "Bangalore" },
+      { img: SJCIT, name: "SJCIT", place: "Bangalore" },
+      { img: NAGARJUNA, name: "NAGARJUNA", place: "Bangalore" },
+      { img: ATRIA, name: "ATRIA", place: "Bangalore" },
+      { img: BGS, name: "BGS", place: "Bangalore" },
+      { img: CMR, name: "CMR IT", place: "Bangalore" },
+      { img: UNCMR, name: "CMR UNIVERSITY", place: "Bangalore" },
+      { img: REVA, name: "REVA", place: "Bangalore" },
+      { img: GARDEN, name: "GARDEN CITY UNIVERSITY", place: "Bangalore" },
+      { img: BRINDAVAN, name: "BRINDAVAN COLLEGE", place: "Bangalore" },
+      { img: JAINCOLLGE, name: "JAIN", place: "Bangalore" },
+      { img: IMPACT, name: "IMPACT COLLEGE", place: "Bangalore" },
+      { img: NIITMEENAKSHI, name: "NIIT MEENAKSHI", place: "Bangalore" },
+      { img: ACHARYA, name: "ACHARYA", place: "Bangalore" },
     ]
   }
   return (

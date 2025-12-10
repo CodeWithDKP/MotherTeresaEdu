@@ -22,7 +22,7 @@ export default function Clients() {
         bgImage={careersHero}
       />
 
-      <section className="clients-section bg-white py-5">
+      <section className="clients-section bg-light py-5">
         <div className="container clients-container">
 
           <h2 className="mb-3 fw-bold text-center">
@@ -54,21 +54,49 @@ export default function Clients() {
             {ourClients.clients.map((item, idx) => (
               <SwiperSlide key={idx}>
                 <div
-                  className="client-card-box"
-                  onMouseEnter={() => swiperRef.current.autoplay.stop()}
-                  onMouseLeave={() => swiperRef.current.autoplay.start()}
+                  className="card shadow-sm border-0"
+                  style={{
+                    transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = "translateY(-6px) scale(1.03)";
+                    e.currentTarget.style.boxShadow = "0 8px 20px rgba(0,0,0,0.15)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = "translateY(0) scale(1)";
+                    e.currentTarget.style.boxShadow = "0 4px 12px rgba(0,0,0,0.08)";
+                  }}
                 >
-                  <div className="client-card p-3 rounded-3">
+                  <div
+                    className="card-img-top"
+                    style={{
+                      height: "160px",
+                      overflow: "hidden",
+                      borderTopLeftRadius: "0.375rem",
+                      borderTopRightRadius: "0.375rem"
+                    }}
+                  >
                     <img
                       src={item.img}
-                      className="img-fluid rounded"
                       alt={item.name}
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "cover",
+                        objectPosition: "center"
+                      }}
                     />
-                    <h3 className="mt-3 h5 fw-bold">{item.name}</h3>
-                    <p className="text-muted">{item.place}</p>
+                  </div>
+
+
+                  <div className="card-body text-center">
+                    <h5 className="card-title fw-bold">{item.name}</h5>
+                    <p className="card-text text-muted">{item.place}</p>
                   </div>
                 </div>
+
               </SwiperSlide>
+
             ))}
           </Swiper>
 
