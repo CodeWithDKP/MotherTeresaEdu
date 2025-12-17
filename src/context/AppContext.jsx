@@ -108,6 +108,7 @@ export const AppProvider = ({ children }) => {
     { name: "About Us", path: "/about" },
     { name: "Team", path: "/team" },
     { name: "Our Clients", path: "/clients" },
+    { name: "Donation", path: "/payment" },
     { name: "Contact Us", path: "/contact" }
   ];
   // static footer data
