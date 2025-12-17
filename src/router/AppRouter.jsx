@@ -7,6 +7,7 @@ const About = lazy(() => import("../pages/About"));
 const Team = lazy(() => import("../pages/Team"));
 const Clients = lazy(() => import("../pages/Clients"));
 const Contact = lazy(() => import("../pages/Contact"));
+const Payment = lazy(() => import("../pages/Payment"));
 
 export default function AppRouter() {
   return (
@@ -25,6 +26,7 @@ export default function AppRouter() {
             <Route path="/team" element={<Team />} />
             <Route path="/clients" element={<Clients />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/payment" element={<Payment />} />
           </Routes>
         </Suspense>
       </MainLayout>

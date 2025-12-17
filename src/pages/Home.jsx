@@ -9,6 +9,7 @@ import '../components/styles/pages/Home.css';
 import studentDev from '../images/studentDevProgram.png';
 import facultyDev from '../images/facultyDevProgram.png';
 import Advantages from "../components/Advantages";
+import { useNavigate } from "react-router-dom";
 
 export default function Home() {
   const { Button, home, indiaData,
@@ -17,19 +18,55 @@ export default function Home() {
     cities } = useApp();
 
   const swiperRef = useRef(null);
+  const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const form = e.target;
-    const formData = new FormData(form);
-    const data = Object.fromEntries(formData.entries());
-    if (!/^\d{10}$/.test(data.mobile)) {
-      alert("Mobile number must be exactly 10 digits");
-      return;
-    }
-    console.log("Form Submitted:", data);
-    form.reset();
+
+const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  const formData = new FormData(e.target);
+
+  const data = {
+    fullName: formData.get("fullName"),
+    email: formData.get("email"),
+    mobile: formData.get("mobile"),
+    state: formData.get("state"),
+    city: formData.get("city"),
+    collegeName: formData.get("collegeName"),
+    stallType: formData.get("stallType"),
+    remarks: formData.get("remarks"),
+    consent: formData.get("consent") === "on",
   };
+
+  try {
+    const response = await fetch(
+      "https://script.google.com/macros/s/AKfycbxzWTkQOo1y-Qi9zScPF3BnIn17MddEw4Ya2FyPsKV0uAvacvrd0zhKcATaWcsNlnc8sQ/exec", // replace with your Google Apps Script URL
+      {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: { "Content-Type": "application/json" },
+      }
+    );
+
+    const result = await response.json(); // parse JSON response
+    console.log(result); // debug
+
+    if (result.status === "success") {
+      alert("Form submitted successfully!");
+      navigate("/payment", { state: data });
+    } else {
+      alert("Error saving data: " + result.message);
+    }
+
+  } catch (err) {
+    console.error(err);
+    alert("Something went wrong: " + err.message);
+  }
+};
+
+
+
+
   //why Mother teresa edu foundation state
   const [showMore, setShowMore] = useState(false);
   useEffect(() => {
@@ -96,12 +133,9 @@ export default function Home() {
         </div>
       </section>
 
-
       <section className="lead-form-container p-5">
         <div className="Lead-form-div bg-white p-3 rounded-3" id="form">
-
           <form onSubmit={handleSubmit} className="lead-form">
-
             <input
               name="fullName"
               type="text"
@@ -127,11 +161,9 @@ export default function Home() {
                 className="input"
                 required
                 maxLength="10"
-                pattern="\d{10}"
               />
             </div>
 
-            {/* ⬇ KEEP STATE + CITY SELECTS */}
             <div className="two-col">
               <select
                 name="state"
@@ -142,48 +174,56 @@ export default function Home() {
               >
                 <option value="">Select State *</option>
                 {Object.keys(indiaData).map((state) => (
-                  <option key={state} value={state}>{state}</option>
+                  <option key={state} value={state}>
+                    {state}
+                  </option>
                 ))}
               </select>
 
-              <select
-                name="city"
-                className="input"
-                required
-              >
+              <select name="city" className="input" required>
                 <option value="">Select City *</option>
                 {cities.map((city) => (
-                  <option key={city} value={city}>{city}</option>
+                  <option key={city} value={city}>
+                    {city}
+                  </option>
                 ))}
               </select>
             </div>
 
-            {/* ⬇ COURSE changed to TEXT INPUT */}
             <input
-              name="course"
+              name="collegeName"
               type="text"
-              placeholder="Enter Course Looking For *"
+              placeholder="Enter College Name *"
               className="input"
               required
             />
 
-            {/* ⬇ SPECIALIZATION changed to TEXT INPUT */}
-            <input
-              name="specialization"
-              type="text"
-              placeholder="Enter Specialization Looking For *"
+            <select name="stallType" className="input" required>
+              <option value="">Select Stall Type *</option>
+              <option value="Title Sponsor">Title Sponsor</option>
+              <option value="Co-Sponsor">Co-Sponsor</option>
+              <option value="Associate Sponsor">Associate Sponsor</option>
+            </select>
+
+            <textarea
+              name="remarks"
+              placeholder="Remarks (optional)"
               className="input"
-              required
+              rows={3}
             />
 
             <label className="consent-row">
               <input name="consent" type="checkbox" required />
-              <span>I agree to receive updates through SMS/Email & WhatsApp *</span>
+              <span>
+                I agree to receive updates through SMS/Email & WhatsApp *
+              </span>
             </label>
 
-            <Button className="form-btn" type="submit">SUBMIT</Button>
+            {/* ✅ NO href */}
+            <Button className="form-btn" type="submit">
+              SUBMIT
+            </Button>
           </form>
-
         </div>
       </section>
 
