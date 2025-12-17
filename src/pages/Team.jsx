@@ -1,13 +1,9 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/pagination";
 import HeroBanner from '../components/HeroBanner';
 import teamHero from '../images/teamHero.webp';
-import { useApp } from '../context/AppContext';
 import '../components/styles/pages/Team.css';
+import ceo from "../images/ceo.jpeg";
+
 export default function Team() {
-  const { Team } = useApp();
   return (
     <>
       <HeroBanner
@@ -16,48 +12,52 @@ export default function Team() {
         bgImage={teamHero}
       />
 
-
       <section className="team-section bg-white py-5">
         <div className="container team-container">
           <h2 className="mb-3 fw-bold text-center">
             <span className="headingPart1">Meet Our</span>
-            <span className="headingPart2"> Team</span>
+            <span className="headingPart2"> Management</span>
           </h2>
 
-          <p className="mb-4 text-center">
-            Our passionate and dedicated educators and staff who strive to make quality education accessible to every student.
+          <p className="mb-5 text-center">
+            Our passionate and dedicated leaders who guide Mother Teresa Educational Foundation with vision and commitment.
           </p>
-          <Swiper
-            modules={[Pagination]}
-            spaceBetween={24}
-            pagination={{
-              clickable: true,
-              bulletClass: "custom-bullet",
-              bulletActiveClass: "custom-bullet-active",
-            }}
-            breakpoints={{
-              0: { slidesPerView: 1, slidesPerGroup: 1 },
-              576: { slidesPerView: 2, slidesPerGroup: 2 },
-              992: { slidesPerView: 4, slidesPerGroup: 4 },
-            }}
-            style={{ paddingBottom: 36 }}
-          >
-            {Team.teamData.map((item, idx) => (
-              <SwiperSlide key={idx}>
-                <div className="team-card-box">
-                  <div className="team-card p-3 rounded-3">
-                    <img src={item.img} className="img-fluid" alt={item.name} />
-                    <h3 className="mt-3 h5 fw-bold">{item.name}</h3>
-                    <p className="text-muted">{item.role}</p>
-                  </div>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+
+          <div className="row align-items-stretch justify-content-center team-row">
+
+            {/* Left: Image */}
+            <div className="col-12 col-md-4 mb-4 mb-md-0">
+              <div className="team-media">
+                <img
+                  src={ceo}
+                  alt="CEO"
+                  className="team-single-img"
+                />
+              </div>
+            </div>
+
+            {/* Right: Text */}
+            <div className="col-12 col-md-7">
+              <div className="team-content">
+                <h3 className="h4 fw-bold mb-2">JAGADEESH</h3>
+                <p className="text-muted mb-3">Management</p>
+
+                <p>
+                  With over 5 years of experience in education and management, JAGADEESH has been instrumental in shaping the vision and mission of Mother Teresa Educational Foundation.
+                </p>
+                <p>
+                  Under his leadership, the foundation has successfully implemented student development programs, faculty enrichment initiatives, and community-focused educational outreach.
+                </p>
+                <p>
+                  He strongly believes in holistic education, personalized mentorship, and creating an environment where students can thrive academically, professionally, and ethically.
+                </p>
+              </div>
+            </div>
+
+          </div>
 
         </div>
       </section>
-
     </>
   );
 }
