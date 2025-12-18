@@ -12,55 +12,53 @@ import Advantages from "../components/Advantages";
 import { useNavigate } from "react-router-dom";
 
 export default function Home() {
-  const { Button, home, indiaData,
+  const {
+    Button,
+    home,
+    indiaData,
     selectedState,
-    handleStateChange,
-    cities } = useApp();
+    setSelectedState,
+    cities,
+    setCities,
+    handleStateChange
+  } = useApp();
+
 
   const swiperRef = useRef(null);
   const navigate = useNavigate();
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
 
-const handleSubmit = async (e) => {
+ const handleSubmit = async (e) => {
   e.preventDefault();
 
-  const formData = new FormData(e.target);
-
-  const data = {
-    fullName: formData.get("fullName"),
-    email: formData.get("email"),
-    mobile: formData.get("mobile"),
-    state: formData.get("state"),
-    city: formData.get("city"),
-    collegeName: formData.get("collegeName"),
-    stallType: formData.get("stallType"),
-    remarks: formData.get("remarks"),
-    consent: formData.get("consent") === "on",
-  };
+  const form = e.target;
+  const formData = new FormData(form);
 
   try {
-    const response = await fetch(
-      "https://script.google.com/macros/s/AKfycbxzWTkQOo1y-Qi9zScPF3BnIn17MddEw4Ya2FyPsKV0uAvacvrd0zhKcATaWcsNlnc8sQ/exec", // replace with your Google Apps Script URL
+    setIsSubmitting(true);
+
+    await fetch(
+      "https://script.google.com/macros/s/AKfycbxsqJtvKhfGsw1kyffrqs7dRQ6bbYJQPVcBmPxLfq65YRX1kj6HonoxnwQ3-uO9HIxK/exec",
       {
         method: "POST",
-        body: JSON.stringify(data),
-        headers: { "Content-Type": "application/json" },
+        body: formData,
       }
     );
 
-    const result = await response.json(); // parse JSON response
-    console.log(result); // debug
+    alert("Form submitted successfully!");
 
-    if (result.status === "success") {
-      alert("Form submitted successfully!");
-      navigate("/payment", { state: data });
-    } else {
-      alert("Error saving data: " + result.message);
-    }
+    // ✅ RESET FORM UI
+    form.reset();
+    setSelectedState("");
+    setCities([]);
+    navigate("/payment");
 
   } catch (err) {
     console.error(err);
-    alert("Something went wrong: " + err.message);
+    alert("Failed to submit form");
+  } finally {
+    setIsSubmitting(false); // 🔄 stop loader
   }
 };
 
@@ -134,98 +132,113 @@ const handleSubmit = async (e) => {
       </section>
 
       <section className="lead-form-container p-5">
-        <div className="Lead-form-div bg-white p-3 rounded-3" id="form">
-          <form onSubmit={handleSubmit} className="lead-form">
-            <input
-              name="fullName"
-              type="text"
-              placeholder="Enter Name *"
-              className="input"
-              required
-            />
+  <div
+    className="Lead-form-div bg-white p-3 rounded-3 position-relative"
+    id="form"
+  >
 
-            <input
-              name="email"
-              type="email"
-              placeholder="Enter Email Address *"
-              className="input"
-              required
-            />
+    {/* 🔄 FORM LOADER OVERLAY */}
+    {isSubmitting && (
+      <div className="form-overlay">
+        <div className="spinner"></div>
+      </div>
+    )}
 
-            <div className="mobile-row">
-              <span className="code">+91</span>
-              <input
-                name="mobile"
-                type="text"
-                placeholder="Enter Mobile Number *"
-                className="input"
-                required
-                maxLength="10"
-              />
-            </div>
+    <form onSubmit={handleSubmit} className="lead-form">
+      <input
+        name="fullName"
+        type="text"
+        placeholder="Enter Name *"
+        className="input"
+        required
+      />
 
-            <div className="two-col">
-              <select
-                name="state"
-                value={selectedState}
-                onChange={(e) => handleStateChange(e.target.value)}
-                className="input"
-                required
-              >
-                <option value="">Select State *</option>
-                {Object.keys(indiaData).map((state) => (
-                  <option key={state} value={state}>
-                    {state}
-                  </option>
-                ))}
-              </select>
+      <input
+        name="email"
+        type="email"
+        placeholder="Enter Email Address *"
+        className="input"
+        required
+      />
 
-              <select name="city" className="input" required>
-                <option value="">Select City *</option>
-                {cities.map((city) => (
-                  <option key={city} value={city}>
-                    {city}
-                  </option>
-                ))}
-              </select>
-            </div>
+      <div className="mobile-row">
+        <span className="code">+91</span>
+        <input
+          name="mobile"
+          type="text"
+          placeholder="Enter Mobile Number *"
+          className="input"
+          required
+          maxLength="10"
+        />
+      </div>
 
-            <input
-              name="collegeName"
-              type="text"
-              placeholder="Enter College Name *"
-              className="input"
-              required
-            />
+      <div className="two-col">
+        <select
+          name="state"
+          value={selectedState}
+          onChange={(e) => handleStateChange(e.target.value)}
+          className="input"
+          required
+        >
+          <option value="">Select State *</option>
+          {Object.keys(indiaData).map((state) => (
+            <option key={state} value={state}>
+              {state}
+            </option>
+          ))}
+        </select>
 
-            <select name="stallType" className="input" required>
-              <option value="">Select Stall Type *</option>
-              <option value="Title Sponsor">Title Sponsor</option>
-              <option value="Co-Sponsor">Co-Sponsor</option>
-              <option value="Associate Sponsor">Associate Sponsor</option>
-            </select>
+        <select name="city" className="input" required>
+          <option value="">Select City *</option>
+          {cities.map((city) => (
+            <option key={city} value={city}>
+              {city}
+            </option>
+          ))}
+        </select>
+      </div>
 
-            <textarea
-              name="remarks"
-              placeholder="Remarks (optional)"
-              className="input"
-              rows={3}
-            />
+      <input
+        name="collegeName"
+        type="text"
+        placeholder="Enter College Name *"
+        className="input"
+        required
+      />
 
-            <label className="consent-row">
-              <input name="consent" type="checkbox" required />
-              <span>
-                I agree to receive updates through SMS/Email & WhatsApp *
-              </span>
-            </label>
+      <select name="stallType" className="input" required>
+        <option value="">Select Stall Type *</option>
+        <option value="Title Sponsor">Title Sponsor</option>
+        <option value="Co-Sponsor">Co-Sponsor</option>
+        <option value="Associate Sponsor">Associate Sponsor</option>
+      </select>
 
-            {/* ✅ NO href */}
-            <Button className="form-btn" type="submit">
-              SUBMIT
-            </Button>
-          </form>
-        </div>
-      </section>
+      <textarea
+        name="remarks"
+        placeholder="Remarks (optional)"
+        className="input"
+        rows={3}
+      />
+
+      <label className="consent-row">
+        <input name="consent" type="checkbox" required />
+        <span>
+          I agree to receive updates through SMS/Email & WhatsApp *
+        </span>
+      </label>
+
+      <Button
+        className="form-btn"
+        type="submit"
+        disabled={isSubmitting}
+      >
+        SUBMIT
+      </Button>
+    </form>
+  </div>
+</section>
+
 
       <section className="whyMotherTeresa-section">
         <div className="container whyMotherTeresa">

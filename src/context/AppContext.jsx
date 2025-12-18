@@ -1713,13 +1713,27 @@ export const AppProvider = ({ children }) => {
   }
   return (
     <AppContext.Provider value={{
-      logo, menus, Button, home, indiaData,
+      logo,
+      menus,
+      Button,
+      home,
+      indiaData,
+
       selectedState,
+      setSelectedState, // ✅ ADD
+      cities,
+      setCities,        // ✅ ADD
       handleStateChange,
-      cities, about, Team, ourClients, Links_Address, footer
+
+      about,
+      Team,
+      ourClients,
+      Links_Address,
+      footer
     }}>
       {children}
     </AppContext.Provider>
+
   );
 };
 
