@@ -1451,26 +1451,48 @@ export const AppProvider = ({ children }) => {
 
     courses: [
       {
-        title: "MANAGEMENT",
-        list: ["PGMD", "MBA", "BBA", "BMS"],
-        img: managment,
-      },
-      {
         title: "ENGINEERING",
-        list: ["B.E/B.Tech", "M.E/M.Tech"],
+        list: [
+          "ITI",
+          "Polytechnic / Diploma",
+          "B.Tech",
+          "M.Tech"
+        ],
         img: engineering,
       },
       {
         title: "MEDICAL",
-        list: ["MBBS", "BDS", "BAMS", "BHMS", "MS", "MD"],
+        list: [
+          "Pharmacy",
+          "MBBS (Abroad)",
+          "Nursing",
+          "Agriculture"
+        ],
         img: medical,
       },
       {
-        title: "STUDAY ABROAD",
-        list: ["Medical", "Managament", "Engineering"],
-        img: abroad,
+        title: "MANAGEMENT & COUNSELING",
+        list: [
+          "MBA",
+          "Hotel Management",
+          "Defence",
+          "B.Ed",
+          "D.Ed"
+        ],
+        img: managment,
+      },
+      {
+        title: "EDUCATION",
+        list: [
+          "10th Class",
+          "INTER (All Groups)",
+          "Degree (All Groups)",
+          "PG"
+        ],
+        img: distance,
       }
-    ],
+    ]
+    ,
     rankedInstitutes: [
       {
         img: auro,

@@ -45,9 +45,10 @@
 .team-single-img {
   width: 100%;
   max-width: 260px;
-  height: 360px;
+  height: 340px;
   object-fit: cover;
-  border-radius: 16px;
+  object-position: center 50%;
+  border-radius: 14px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
 }
 
@@ -111,3 +112,4 @@
   overflow: hidden;
   padding-bottom: 18px;
 }
+  
