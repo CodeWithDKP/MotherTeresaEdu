@@ -51,7 +51,7 @@ export default function Clients() {
             onSwiper={(swiper) => (swiperRef.current = swiper)}
             style={{ paddingBottom: 36 }}
           >
-            {ourClients.clients.map((item, idx) => (
+            {ourClients.newClients.map((item, idx) => (
               <SwiperSlide key={idx}>
                 <div
                   className="card shadow-sm border-0"
@@ -78,7 +78,7 @@ export default function Clients() {
                   >
                     <img
                       src={item.img}
-                      alt={item.name}
+                      alt={item.intution}
                       style={{
                         width: "100%",
                         height: "100%",
@@ -89,10 +89,20 @@ export default function Clients() {
                   </div>
 
 
-                  <div className="card-body text-center">
-                    <h5 className="card-title fw-bold">{item.name}</h5>
-                    <p className="card-text text-muted">{item.place}</p>
+                  <div className="card-body text-center px-2 py-3">
+                    <h6 className="card-title fw-semibold mb-1">
+                      {item.intution}
+                    </h6>
+
+                    <p className="card-text small mb-1">
+                      {item.campus}
+                    </p>
+
+                    <p className="card-text text-muted small mb-0">
+                      {item.address}
+                    </p>
                   </div>
+
                 </div>
 
               </SwiperSlide>

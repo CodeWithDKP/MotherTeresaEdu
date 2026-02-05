@@ -77,6 +77,8 @@ import at_3 from '../images/at_3.jpg'
 import at_4 from '../images/at_4.jpg'
 import at_5 from '../images/at_5.jpg'
 import at_6 from '../images/at_6.jpg'
+//new clients
+import commonImg from "../images/common.jpg";
 
 //icons
 import {
@@ -1709,7 +1711,910 @@ export const AppProvider = ({ children }) => {
       { img: IMPACT, name: "IMPACT COLLEGE", place: "Bangalore" },
       { img: NIITMEENAKSHI, name: "NIIT MEENAKSHI", place: "Bangalore" },
       { img: ACHARYA, name: "ACHARYA", place: "Bangalore" },
-    ]
+    ],
+   newClients: [
+  {
+    img: commonImg,
+    intution: "Academy for Learning Pre-University College",
+    campus: "Raja Reddy Layout",
+    address: "Raja Reddy Layout, Hesaraghatta Main Road, Chikkabanavara, Bangalore."
+  },
+  {
+    img: commonImg,
+    intution: "ACS College",
+    campus: "Kambipura",
+    address: "Kambipura, Mysore Road, Bangalore"
+  },
+  {
+    img: commonImg,
+    intution: "Adani University",
+    campus: "Shantigram",
+    address: "nr. Vaishnodevi Circle, Shantigram, Khodiyar, Ahmedabad, Gujarat"
+  },
+  {
+    img: commonImg,
+    intution: "Adarsh Institute of Management & Information Technology",
+    campus: "Chamarajpet",
+    address: "5th Main, Chamarajpet, Bangalore, Karnataka, India"
+  },
+  {
+    img: commonImg,
+    intution: "AIMS Institutes",
+    campus: "Peenya",
+    address: "1st Cross, 1st Stage, Peenya, Bengaluru, Karnataka, India"
+  },
+  {
+    img: commonImg,
+    intution: "Al-Ameen Pre University College",
+    campus: "Hosur Road",
+    address: "Behind Al-Ameen Towers, Near Lalbagh Main Gate, Bangalore"
+  },
+  {
+    img: commonImg,
+    intution: "Alard University",
+    campus: "Rajiv Gandhi IT Park",
+    address: "Survey No. 47 & 50, Near Rajiv Gandhi IT Park, Marunji, Hinjawadi, Pune, Maharashtra"
+  },
+  {
+    img: commonImg,
+    intution: "Alliance University",
+    campus: "Anekal",
+    address: "Chikkahagade Cross, Chandapura–Anekal Main Road, Anekal, Bengaluru, Karnataka"
+  },
+  {
+    img: commonImg,
+    intution: "Alliance Ascent College",
+    campus: "BTM 2nd Stage",
+    address: "19th Cross, 7th Main, N.S. Palya, BTM 2nd Stage, Bengaluru"
+  },
+  {
+    img: commonImg,
+    intution: "Alva's Institute of Engineering and Technology",
+    campus: "Moodbidri",
+    address: "Solapur–Mangalore Highway, Shobhavana Campus, MIJAR, Moodbidri, Karnataka"
+  },
+  {
+    img: commonImg,
+    intution: "Amity University",
+    campus: "Bengaluru (Devanahalli)",
+    address: "NH-648, Devanahalli–Doddaballapur Road, Bengaluru, Karnataka"
+  },
+  {
+    img: commonImg,
+    intution: "Amity University",
+    campus: "Chhattisgarh",
+    address: "State Highway 9, Raipur–Baloda Bazar Marg, Raipur, Chhattisgarh"
+  },
+  {
+    img: commonImg,
+    intution: "Amity University",
+    campus: "Gurgaon",
+    address: "Amity Education Valley, Pachgaon, Gurugram, Haryana"
+  },
+  {
+    img: commonImg,
+    intution: "Amity University",
+    campus: "Jaipur",
+    address: "NH-11, Jaipur–Ajmer Highway, Jaipur, Rajasthan"
+  },
+  {
+    img: commonImg,
+    intution: "Amity University",
+    campus: "Kolkata",
+    address: "Major Arterial Road, Action Area-II, New Town, Kolkata, West Bengal"
+  },
+  {
+    img: commonImg,
+    intution: "Amity University",
+    campus: "Patna",
+    address: "Bailey Road, Rupaspur, Patna, Bihar"
+  },
+  {
+    img: commonImg,
+    intution: "Amrita Vishwa Vidyapeetham",
+    campus: "Amaravati",
+    address: "Kuragallu Village, Mangalagiri Mandal, Guntur, Andhra Pradesh"
+  },
+  {
+    img: commonImg,
+    intution: "Amrita Vishwa Vidyapeetham",
+    campus: "Amritapuri",
+    address: "Amritapuri, Clappana, Vallikavu, Kerala"
+  },
+  {
+    img: commonImg,
+    intution: "Amrita Vishwa Vidyapeetham",
+    campus: "Bengaluru",
+    address: "Amrita Nagar, Choodasandra, Bengaluru, Karnataka"
+  },
+  {
+    img: commonImg,
+    intution: "Anant National University",
+    campus: "Sanskardham",
+    address: "Near S.P. Ring Road, Bopal–Ghuma, Ahmedabad, Gujarat"
+  },
+  {
+    img: commonImg,
+    intution: "Apeejay Stya University",
+    campus: "Gurugram",
+    address: "Palwal–Sohna Road, Gurugram, Haryana"
+  },
+  {
+    img: commonImg,
+    intution: "Arihanth Pre-University College",
+    campus: "Thalaghattapura",
+    address: "Opp. Metro Pillar No.275, Thalaghattapura, Bengaluru"
+  },
+  {
+    img: commonImg,
+    intution: "Arihanth Pre-University College",
+    campus: "V.V. Puram",
+    address: "148, R.V. Road, V.V. Puram, Bengaluru"
+  },
+  {
+    img: commonImg,
+    intution: "Ashoka University",
+    campus: "Sonipat",
+    address: "Rajiv Gandhi Education City, Sonepat, Haryana"
+  },
+  {
+    img: commonImg,
+    intution: "Asian Business School",
+    campus: "Noida",
+    address: "Plot A2, Sector 125, Noida, Uttar Pradesh"
+  },
+  {
+    img: commonImg,
+    intution: "Atlas Skilltech University",
+    campus: "Ambedkar Nagar",
+    address: "Equinox Business Park, Ambedkar Nagar, Kurla West, Mumbai, Maharashtra"
+  },
+  {
+    img: commonImg,
+    intution: "Auro University",
+    campus: "Earthspace, Surat",
+    address: "AURO University, Earthspace, Hazira Road, Surat, Gujarat, India"
+  },
+  {
+    img: commonImg,
+    intution: "Azim Premji University",
+    campus: "Bengaluru (Sarjapura)",
+    address: "Burugunte Village, Bikkanahalli Main Road, Sarjapura, Bengaluru, Karnataka"
+  },
+  {
+    img: commonImg,
+    intution: "Azim Premji University",
+    campus: "Bhopal",
+    address: "Bhopal–Vidisha Bypass Road, Kanhasaiya, Tehsil Huzur, Bhopal, Madhya Pradesh"
+  },
+  {
+    img: commonImg,
+    intution: "Bangalore City College",
+    campus: "Banaswadi",
+    address: "160, Chelekere Main Road, Banaswadi Outer Ring Road, Bengaluru"
+  },
+  {
+    img: commonImg,
+    intution: "Bangalore Institute of Technology",
+    campus: "V V Pura",
+    address: "K R Road, V V Pura, Bengaluru, Karnataka, India"
+  },
+  {
+    img: commonImg,
+    intution: "Bennett University",
+    campus: "Greater Noida",
+    address: "Plot Nos. 8–11, Tech Zone II, Greater Noida, Uttar Pradesh"
+  },
+  {
+    img: commonImg,
+    intution: "BLDE University",
+    campus: "Bijapur",
+    address: "Smt. Bangaramma Sajjan Campus, B M Patil Road, Vijayapura, Karnataka"
+  },
+  {
+    img: commonImg,
+    intution: "BML Munjal University",
+    campus: "Gurugram",
+    address: "NH-48, 67th Milestone, Gurugram, Haryana"
+  },
+  {
+    img: commonImg,
+    intution: "BMS College for Women",
+    campus: "Basavanagudi",
+    address: "Bugle Rock Road, Basavanagudi, Bangalore, Karnataka"
+  },
+  {
+    img: commonImg,
+    intution: "BMS College of Architecture, Design and Planning",
+    campus: "Bull Temple Road",
+    address: "Bull Temple Road, Bengaluru, Karnataka"
+  },
+  {
+    img: commonImg,
+    intution: "BMS College of Engineering",
+    campus: "Bull Temple Road",
+    address: "P.O. Box No. 1908, Bull Temple Road, Bengaluru, Karnataka"
+  },
+  {
+    img: commonImg,
+    intution: "BMS Institute of Technology and Management",
+    campus: "Doddaballapur Main Road",
+    address: "Avalahalli, Yelahanka, Bengaluru, Karnataka"
+  },
+  {
+    img: commonImg,
+    intution: "BMS PU College for Women",
+    campus: "Basavanagudi",
+    address: "Bugle Rock Park Road, Basavanagudi, Bengaluru"
+  },
+  {
+    img: commonImg,
+    intution: "BMS School of Architecture",
+    campus: "Doddaballapur",
+    address: "Off BMSIT Campus, Doddaballapur Main Road, Avalahalli, Yelahanka, Bengaluru"
+  },
+  {
+    img: commonImg,
+    intution: "B.N.M. Institute of Technology",
+    campus: "Banashankari",
+    address: "12th Main Road, 27th Cross, Banashankari Stage II, Bengaluru, Karnataka"
+  },
+  {
+    img: commonImg,
+    intution: "Brainware University",
+    campus: "Barasat",
+    address: "398, Ramkrishnapur Road, Barasat, Kolkata, West Bengal"
+  },
+  {
+    img: commonImg,
+    intution: "Brindavan Group of Institutions",
+    campus: "Yelahanka",
+    address: "Dwarakanagar, Bagalur Main Road, Yelahanka, Bengaluru, Karnataka"
+  },
+  {
+    img: commonImg,
+    intution: "BTL PU College",
+    campus: "Bommasandra",
+    address: "259/B, Hosur Road, Bommasandra Industrial Area, Bengaluru, Karnataka"
+  },
+  {
+    img: commonImg,
+    intution: "C B Bhandari Jain College",
+    campus: "Shankarpuram",
+    address: "#84, K.R. Road, Shankarpuram, Bengaluru, Karnataka"
+  },
+  {
+    img: commonImg,
+    intution: "Chanakya University",
+    campus: "Devanahalli",
+    address: "Global Campus, near Bengaluru International Airport, Devanahalli, Karnataka"
+  },
+  {
+    img: commonImg,
+    intution: "Chandigarh University",
+    campus: "Mohali",
+    address: "NH-05, Chandigarh–Ludhiana Highway, Mohali, Punjab"
+  },
+  {
+    img: commonImg,
+    intution: "Chitkara University",
+    campus: "Himachal Pradesh",
+    address: "Pinjore–Barotiwala National Highway (NH-105), Himachal Pradesh"
+  },
+  {
+    img: commonImg,
+    intution: "Christ Academy Institute for Advanced Studies",
+    campus: "Begur–Koppa Road",
+    address: "Christ Nagar, Hullahalli, Bengaluru, Karnataka"
+  },
+  {
+    img: commonImg,
+    intution: "City Engineering College",
+    campus: "Kanakapura Road",
+    address: "Doddakallasandra, Off Kanakapura Road, Bengaluru"
+  },
+  {
+    img: commonImg,
+    intution: "CMR University",
+    campus: "City Campus, Kalyan Nagar",
+    address: "HRBR Layout, 2nd Block, Kalyan Nagar, Bengaluru, Karnataka"
+  },
+  {
+    img: commonImg,
+    intution: "CMR University",
+    campus: "Lakeside Campus, Bagalur Main Road",
+    address: "Near Kempegowda International Airport, Bengaluru, Karnataka"
+  },
+  {
+    img: commonImg,
+    intution: "CMR University",
+    campus: "OMBR Campus, Banaswadi",
+    address: "Chikka Banaswadi Road, Banaswadi, Bengaluru, Karnataka"
+  },
+  {
+    img: commonImg,
+    intution: "Dayananda Sagar Academy of Technology and Management",
+    campus: "Kanakapura Main Road",
+    address: "Opp. Art of Living International Centre, Udayapura, Bengaluru"
+  },
+  {
+    img: commonImg,
+    intution: "Dayananda Sagar College of Engineering",
+    campus: "Kumaraswamy Layout",
+    address: "Mahatma Gandhi Vidya Peetha Trust, Bengaluru, Karnataka"
+  },
+  {
+    img: commonImg,
+    intution: "Dayananda Sagar University",
+    campus: "City Innovation Campus, Hosur Road",
+    address: "Administrative Office, Kudlu Gate, Hosur Road, Bengaluru"
+  },
+  {
+    img: commonImg,
+    intution: "Dayananda Sagar University",
+    campus: "Main Campus, Harohalli",
+    address: "Kanakapura Road, Ramanagara District, Karnataka"
+  },
+  {
+    img: commonImg,
+    intution: "DES Pune University",
+    campus: "Shivajinagar",
+    address: "BMCC Campus, Agarkar Road, Shivajinagar, Pune, Maharashtra"
+  },
+  {
+    img: commonImg,
+    intution: "Dhirubhai Ambani Institute of Information and Communication Technology",
+    campus: "Gandhinagar",
+    address: "DA-IICT Road, Near Indroda Circle, Gandhinagar, Gujarat"
+  },
+  {
+    img: commonImg,
+    intution: "Don Bosco College",
+    campus: "K R Puram",
+    address: "Bosco Nagar, TC Palya, K.R. Puram, Bengaluru, Karnataka"
+  },
+  {
+    img: commonImg,
+    intution: "Don Bosco Institute of Technology",
+    campus: "Kumbalgodu",
+    address: "State Highway 17, Kumbalgodu, Bengaluru, Karnataka"
+  },
+  {
+    img: commonImg,
+    intution: "Doon Business School (DBS Global University)",
+    campus: "Dehradun",
+    address: "Selaqui Industrial Area, Dehradun, Uttarakhand"
+  },
+  {
+    img: commonImg,
+    intution: "Dr. A.P.J. Abdul Kalam University",
+    campus: "Indore",
+    address: "Indore–Dewas Bypass Road, Arandia Village, Indore, Madhya Pradesh"
+  },
+  {
+    img: commonImg,
+    intution: "D Y Patil Business School",
+    campus: "Pimpri",
+    address: "Sant Tukaram Nagar, Pimpri, Pune, Maharashtra"
+  },
+  {
+    img: commonImg,
+    intution: "D Y Patil International University",
+    campus: "Akurdi",
+    address: "Sector 29, Nigdi Pradhikaran, Akurdi, Pune, Maharashtra"
+  },
+  {
+    img: commonImg,
+    intution: "Galgotias University",
+    campus: "Greater Noida",
+    address: "Yamuna Expressway, Sector 17A, Greater Noida, Uttar Pradesh"
+  },
+  {
+    img: commonImg,
+    intution: "Ganpat University",
+    campus: "Ganpat Vidyanagar",
+    address: "Mehsana–Gandhinagar Highway, North Gujarat, India"
+  },
+  {
+    img: commonImg,
+    intution: "Garden City University",
+    campus: "Old Madras Road",
+    address: "16th KM, Old Madras Road, Bengaluru"
+  },
+  {
+    img: commonImg,
+    intution: "G.H Raisoni Skill Tech University",
+    campus: "Nagpur",
+    address: "Hingna–Wadi Link Road, Nagpur, Maharashtra"
+  },
+  {
+    img: commonImg,
+    intution: "GITAM Deemed to be University",
+    campus: "Bangalore",
+    address: "NH 207, Doddaballapura, Bengaluru, Karnataka"
+  },
+  {
+    img: commonImg,
+    intution: "GITAM Deemed to be University",
+    campus: "Visakhapatnam",
+    address: "Rushikonda, Gandhi Nagar, Visakhapatnam, Andhra Pradesh"
+  },
+  {
+    img: commonImg,
+    intution: "GITAM Deemed to be University",
+    campus: "Hyderabad",
+    address: "Rudraram, Patancheru Mandal, Telangana"
+  },
+  {
+    img: commonImg,
+    intution: "Global Academy of Technology",
+    campus: "Rajarajeshwari Nagar",
+    address: "Aditya Layout, Rajarajeshwari Nagar, Bengaluru, Karnataka"
+  },
+  {
+    img: commonImg,
+    intution: "Global Institute of Business Studies",
+    campus: "Mylasandra Road",
+    address: "Off Begur–Koppa Road, Bengaluru, Karnataka"
+  },
+  {
+    img: commonImg,
+    intution: "GRV Group of Institutions",
+    campus: "Ganganagar",
+    address: "Dena Bank Colony, Ganganagar, Bengaluru"
+  },
+  {
+    img: commonImg,
+    intution: "GRV Institute of Medical Sciences",
+    campus: "Devanahalli Taluk",
+    address: "Arasanahalli, IVC Road, Devanahalli Taluk, Bengaluru, Karnataka"
+  },
+  {
+    img: commonImg,
+    intution: "Haridwar University",
+    campus: "Roorkee",
+    address: "Upper Ganga Canal Road, Bajuheri, Roorkee, Uttarakhand"
+  },
+  {
+    img: commonImg,
+    intution: "HKBK Group of Institutions",
+    campus: "Nagawara",
+    address: "Opp. Manyata Tech Park, Nagawara, Bengaluru, Karnataka"
+  },
+  {
+    img: commonImg,
+    intution: "HRIT University",
+    campus: "Ghaziabad",
+    address: "Meerut Road, Near Duhai Rapid Rail Station, Ghaziabad, Uttar Pradesh"
+  },
+  {
+    img: commonImg,
+    intution: "ICFAI Business School",
+    campus: "Ahmedabad",
+    address: "Annapurna Dham, Por, Adalaj–Koba Road, Ahmedabad, Gujarat"
+  },
+  {
+    img: commonImg,
+    intution: "ICFAI Business School",
+    campus: "Bangalore",
+    address: "Near Check Post, Mysore Road, Kengeri, Bengaluru, Karnataka"
+  },
+  {
+    img: commonImg,
+    intution: "ICFAI Business School",
+    campus: "Dehradun",
+    address: "Selaqui–Rajawala Road, Central Hope Town, Dehradun, Uttarakhand"
+  },
+  {
+    img: commonImg,
+    intution: "ICFAI Business School",
+    campus: "Gurgaon",
+    address: "Golf Course Extension Road, Sector 62, Gurugram, Haryana"
+  },
+  {
+    img: commonImg,
+    intution: "ICFAI Business School",
+    campus: "Hyderabad",
+    address: "Donthanapally, Shankarapalli Road, Hyderabad, Telangana"
+  },
+  {
+    img: commonImg,
+    intution: "ICFAI Business School",
+    campus: "Jaipur",
+    address: "Jamdoli, Agra Road, Jaipur, Rajasthan"
+  },
+  {
+    img: commonImg,
+    intution: "ICFAI Business School",
+    campus: "Kolkata",
+    address: "Sector V, Salt Lake City, Kolkata, West Bengal"
+  },
+  {
+    img: commonImg,
+    intution: "ICFAI Business School",
+    campus: "Mumbai",
+    address: "Hiranandani Knowledge Park, Powai, Mumbai, Maharashtra"
+  },
+  {
+    img: commonImg,
+    intution: "ICFAI Business School",
+    campus: "Pune",
+    address: "Hadapsar, Pune, Maharashtra"
+  },
+  {
+    img: commonImg,
+    intution: "IES University",
+    campus: "Ratibad",
+    address: "Ratibad Main Road, Bhopal, Madhya Pradesh"
+  },
+  {
+    img: commonImg,
+    intution: "IFIM College",
+    campus: "Electronic City",
+    address: "KIADB Industrial Area, Electronics City Phase 1, Bengaluru, Karnataka"
+  },
+  {
+    img: commonImg,
+    intution: "IFTM University",
+    campus: "Moradabad",
+    address: "Delhi Road, Lodhipur Rajput, Moradabad, Uttar Pradesh"
+  },
+  {
+    img: commonImg,
+    intution: "IIHMR University",
+    campus: "Jaipur",
+    address: "Prabhu Dayal Marg, Near Sanganer Airport, Jaipur, Rajasthan"
+  },
+  {
+    img: commonImg,
+    intution: "IILM University",
+    campus: "Greater Noida",
+    address: "Knowledge Park II, Greater Noida, Uttar Pradesh"
+  },
+  {
+    img: commonImg,
+    intution: "IILM University",
+    campus: "Gurugram",
+    address: "Sector 53, Golf Course Road, Gurugram, Haryana"
+  },
+  {
+    img: commonImg,
+    intution: "IILM University",
+    campus: "Jaipur",
+    address: "Pratap Nagar, Sanganer, Jaipur, Rajasthan"
+  },
+  {
+    img: commonImg,
+    intution: "IILM University",
+    campus: "Lucknow",
+    address: "Viraj Khand, Gomti Nagar, Lucknow, Uttar Pradesh"
+  },
+  {
+    img: commonImg,
+    intution: "IMS Unison University",
+    campus: "Dehradun",
+    address: "Mussoorie Diversion Road, Dehradun, Uttarakhand"
+  },
+  {
+    img: commonImg,
+    intution: "Indian Academy Pre-University College",
+    campus: "Hennur",
+    address: "Hennur Main Road, Kalyan Nagar, Bengaluru, Karnataka"
+  },
+  {
+    img: commonImg,
+    intution: "Indo Asian Academy Degree College",
+    campus: "Kalyan Nagar",
+    address: "Outer Ring Road, Near Indo Asian Bus Stop, Bengaluru, Karnataka"
+  },
+  {
+    img: commonImg,
+    intution: "Indus Business Academy",
+    campus: "Kanakapura Road",
+    address: "Lakshmipura, Thataguni Post, Bengaluru, Karnataka"
+  },
+  {
+    img: commonImg,
+    intution: "Institute of Business Management and Research (IBMR)",
+    campus: "Yelahanka",
+    address: "9th A Cross, A Sector, Yelahanka New Town, Bengaluru, Karnataka"
+  },
+  {
+    img: commonImg,
+    intution: "Institute of Salutogenesis and Complementary Medicine",
+    campus: "Pillayarkuppam",
+    address: "MGMCRI Hospital Road, Pillayarkuppam, Puducherry"
+  },
+  {
+    img: commonImg,
+    intution: "International Institute of Business Studies (IIBS)",
+    campus: "Begur",
+    address: "Muthugadahalli, Bangalore North, Begur, Bengaluru, Karnataka"
+  },
+  {
+    img: commonImg,
+    intution: "ISBM University",
+    campus: "Nawapara",
+    address: "Vill-Nawapara (Kosmi), Chhura Block, Gariyaband District"
+  },
+  {
+    img: commonImg,
+    intution: "ISME",
+    campus: "Sarjapur Road",
+    address: "Chembanahalli, Near Dommasandra Circle, Sarjapur Road, Bengaluru"
+  },
+  {
+    img: commonImg,
+    intution: "ITM Skills University",
+    campus: "Kharghar",
+    address: "Institutional Area, Kharghar, Navi Mumbai"
+  },
+  {
+    img: commonImg,
+    intution: "ITM University",
+    campus: "Raipur",
+    address: "Sector 40, Atal Nagar, Nava Raipur, Chhattisgarh"
+  },
+  {
+    img: commonImg,
+    intution: "Jagannath University",
+    campus: "Jaipur",
+    address: "Chaksu Bypass, Tonk Road, Jaipur, Rajasthan"
+  },
+  {
+    img: commonImg,
+    intution: "Jagan Nath University",
+    campus: "Jhajjar",
+    address: "Bahadurgarh–Jhajjar Road, Jhajjar, Haryana"
+  },
+  {
+    img: commonImg,
+    intution: "Jagran LakeCity University",
+    campus: "Bhopal",
+    address: "Mugaliyachap, Near Ratibad, Bhopal, Madhya Pradesh"
+  },
+  {
+    img: commonImg,
+    intution: "Jaypee Institute of Information Technology",
+    campus: "Noida",
+    address: "Sector 62, Noida, Uttar Pradesh"
+  },
+  {
+    img: commonImg,
+    intution: "JSPM University",
+    campus: "Pune",
+    address: "Katraj Chowk, Pune, Maharashtra"
+  },
+  {
+    img: commonImg,
+    intution: "JSS Science and Technology University",
+    campus: "Mysuru",
+    address: "University of Mysore Campus, Mysuru, Karnataka"
+  },
+  {
+    img: commonImg,
+    intution: "JSS University",
+    campus: "Noida",
+    address: "Sector 62, Noida, Uttar Pradesh"
+  },
+  {
+    img: commonImg,
+    intution: "Karnavati University",
+    campus: "Uvarsad",
+    address: "Adalaj–Uvarsad Road, Gandhinagar, Gujarat"
+  },
+  {
+    img: commonImg,
+    intution: "Khalsa University",
+    campus: "Amritsar",
+    address: "GT Road, Near Guru Nanak Dev University, Amritsar, Punjab"
+  },
+  {
+    img: commonImg,
+    intution: "KLE Law College",
+    campus: "Bengaluru",
+    address: "Sir M. Vishweshwaraiah Layout, Ullal, Bengaluru, Karnataka"
+  },
+  {
+    img: commonImg,
+    intution: "KLE Technological University",
+    campus: "Hubballi",
+    address: "Gokul Road, Hubballi, Karnataka"
+  },
+  {
+    img: commonImg,
+    intution: "Koshys Group of Institutions",
+    campus: "Hennur-Bagalur Road",
+    address: "Kannur Post, Hennur-Bagalur Road, Bengaluru, Karnataka"
+  },
+  {
+    img: commonImg,
+    intution: "Kristu Jayanti University",
+    campus: "K. Narayanapura",
+    address: "Kothanur Post, Bengaluru, Karnataka"
+  },
+  {
+    img: commonImg,
+    intution: "K R Mangalam University",
+    campus: "Gurugram",
+    address: "Sohna Road, Gurugram, Haryana"
+  },
+  {
+    img: commonImg,
+    intution: "Krupanidhi Group of Institutions",
+    campus: "Sarjapur Road",
+    address: "Chikka Bellandur, Carmelaram Post, Bengaluru, Karnataka"
+  },
+  {
+    img: commonImg,
+    intution: "Krupanidhi Pre University College",
+    campus: "Sarjapur Road",
+    address: "Chikka Bellandur, Carmelaram Post, Bengaluru, Karnataka"
+  },
+  {
+    img: commonImg,
+    intution: "Lexicon Mile",
+    campus: "Wagholi, Pune",
+    address: "GAT No. 726, Pune–Nagar Road, Wagholi, Pune, Maharashtra"
+  },
+  {
+    img: commonImg,
+    intution: "Maharaja Agrasen Himalayan Garhwal University",
+    campus: "Pauri Garhwal",
+    address: "Dhaid Gaon, Pokhra Block, Pauri Garhwal, Uttarakhand"
+  },
+  {
+    img: commonImg,
+    intution: "Maharishi Markandeshwar University",
+    campus: "Himachal Pradesh",
+    address: "Bajoral Khurd, Solan, Himachal Pradesh"
+  },
+  {
+    img: commonImg,
+    intution: "Malla Reddy University",
+    campus: "Maisammaguda",
+    address: "Maisammaguda, Dulapally, Hyderabad, Telangana"
+  },
+  {
+    img: commonImg,
+    intution: "Mangalmay Group of Institutions",
+    campus: "Greater Noida",
+    address: "Knowledge Park II, Greater Noida, Uttar Pradesh"
+  },
+  {
+    img: commonImg,
+    intution: "Manipal Academy of Higher Education",
+    campus: "Bengaluru",
+    address: "BSF Campus, Govindapura, Yelahanka, Bengaluru, Karnataka"
+  },
+  {
+    img: commonImg,
+    intution: "Manipal Academy of Higher Education",
+    campus: "Jamshedpur",
+    address: "Kadani Road, Baridih, Jamshedpur, Jharkhand"
+  },
+  {
+    img: commonImg,
+    intution: "Manipal Academy of Higher Education",
+    campus: "Mangaluru",
+    address: "Hampankatta, Mangaluru, Karnataka"
+  },
+  {
+    img: commonImg,
+    intution: "Manipal Academy of Higher Education",
+    campus: "Manipal",
+    address: "Madhav Nagar, Manipal, Udupi District, Karnataka"
+  },
+  {
+    img: commonImg,
+    intution: "Meenakshi Ammal Dental College & Hospital",
+    campus: "Janaki Nagar",
+    address: "Alapakkam Main Road, Janaki Nagar, Chennai, Tamil Nadu"
+  },
+  {
+    img: commonImg,
+    intution: "Meenakshi College of Allied Health Sciences",
+    campus: "Kottakudi",
+    address: "Kottakudi, Melur Taluk, Tamil Nadu"
+  },
+  {
+    img: commonImg,
+    intution: "Meenakshi College of Physiotherapy",
+    campus: "K. K. Nagar West",
+    address: "Vembuliamman Koil Street, Chennai, Tamil Nadu"
+  },
+  {
+    img: commonImg,
+    intution: "MIT Art Design and Technology University",
+    campus: "Rajbaug",
+    address: "Loni Kalbhor, Solapur Highway, Pune, Maharashtra"
+  },
+  {
+    img: commonImg,
+    intution: "MIT Vishwaprayag University",
+    campus: "Solapur",
+    address: "Solapur–Pune Highway, Kegaon, Solapur, Maharashtra"
+  },
+  {
+    img: commonImg,
+    intution: "MIT World Peace University",
+    campus: "Kothrud",
+    address: "Paud Road, Kothrud, Pune, Maharashtra"
+  },
+  {
+    img: commonImg,
+    intution: "MKPM RV Institute of Legal Studies",
+    campus: "Jayanagar",
+    address: "22nd Cross Road, Jayanagar 3rd Block East, Bengaluru, Karnataka"
+  },
+  {
+    img: commonImg,
+    intution: "Mohan Babu University",
+    campus: "Tirupati",
+    address: "Sree Sainath Nagar, Tirupati, Andhra Pradesh"
+  },
+  {
+    img: commonImg,
+    intution: "Mount Carmel College",
+    campus: "Vasanthnagar",
+    address: "Palace Road, Vasanthnagar, Bengaluru, Karnataka"
+  },
+  {
+    img: commonImg,
+    intution: "Mount Carmel Pre-University College",
+    campus: "Vasanthnagar",
+    address: "Palace Road, Vasanthnagar, Bengaluru, Karnataka"
+  },
+  {
+    img: commonImg,
+    intution: "M. P. Birla Institute of Management",
+    campus: "Race Course Road",
+    address: "Associates Bharatiya Vidya Bhavan, Bengaluru, Karnataka"
+  },
+  {
+    img: commonImg,
+    intution: "MS Ramaiah Foundation (RIBS)",
+    campus: "Gokula Extension",
+    address: "M.S. Ramaiah Road, Bengaluru, Karnataka"
+  },
+  {
+    img: commonImg,
+    intution: "MS Ramaiah Foundation (RIMS)",
+    campus: "Gokula Extension",
+    address: "M.S. Ramaiah Road, Bengaluru, Karnataka"
+  },
+  {
+    img: commonImg,
+    intution: "MS Ramaiah University of Applied Sciences",
+    campus: "Mathikere",
+    address: "New BEL Road, Mathikere, Bengaluru, Karnataka"
+  },
+  {
+    img: commonImg,
+    intution: "MVM Educational Institutions",
+    campus: "Yelahanka",
+    address: "Vikas Layout, Yelahanka, Bengaluru, Karnataka"
+  },
+  {
+    img: commonImg,
+    intution: "MYRA School of Business",
+    campus: "Mysuru",
+    address: "Near Infosys, Yelwal, Mysuru, Karnataka"
+  },
+  {
+    img: commonImg,
+    intution: "Nagarjuna College of Engineering & Technology",
+    campus: "Devanahalli",
+    address: "Beedaganahalli, Devanahalli, Bengaluru, Karnataka"
+  },
+  {
+    img: commonImg,
+    intution: "Nagarjuna College of Management Studies",
+    campus: "Chikkamarali",
+    address: "NCET Campus, Chikkamarali, Chikkaballapur, Karnataka"
+  }
+]
+
   }
   return (
     <AppContext.Provider value={{
