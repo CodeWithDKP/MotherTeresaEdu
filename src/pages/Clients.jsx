@@ -38,11 +38,7 @@ export default function Clients() {
             modules={[Pagination, Autoplay]}
             spaceBetween={24}
             autoplay={{ delay: 3000 }}
-            pagination={{
-              clickable: true,
-              bulletClass: "custom-bullet",
-              bulletActiveClass: "custom-bullet-active",
-            }}
+           
             breakpoints={{
               0: { slidesPerView: 1, slidesPerGroup: 1 },
               576: { slidesPerView: 2, slidesPerGroup: 2 },
