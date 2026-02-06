@@ -2,6 +2,7 @@ import HeroBanner from '../components/HeroBanner';
 import teamHero from '../images/teamHero.webp';
 import '../components/styles/pages/Team.css';
 import ceo from "../images/ceo.jpeg";
+import Nagendra from "../images/Nagendra.jpeg";
 
 export default function Team() {
   return (
@@ -23,14 +24,15 @@ export default function Team() {
             Our passionate and dedicated leaders who guide Mother Teresa Educational Foundation with vision and commitment.
           </p>
 
-          <div className="row align-items-stretch justify-content-center team-row">
+          {/* ===== Team Member 1 ===== */}
+          <div className="row align-items-stretch justify-content-center team-row mb-5">
 
             {/* Left: Image */}
             <div className="col-12 col-md-4 mb-4 mb-md-0">
               <div className="team-media">
                 <img
                   src={ceo}
-                  alt="CEO"
+                  alt="JAGADEESH"
                   className="team-single-img"
                 />
               </div>
@@ -50,6 +52,40 @@ export default function Team() {
                 </p>
                 <p>
                   He strongly believes in holistic education, personalized mentorship, and creating an environment where students can thrive academically, professionally, and ethically.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+          {/* ===== Team Member 2 ===== */}
+          <div className="row align-items-stretch justify-content-center team-row">
+
+            {/* Left: Image */}
+            <div className="col-12 col-md-4 mb-4 mb-md-0">
+              <div className="team-media">
+                <img
+                  src={Nagendra}
+                  alt="Nagendra"
+                  className="team-single-img"
+                />
+              </div>
+            </div>
+
+            {/* Right: Text */}
+            <div className="col-12 col-md-7">
+              <div className="team-content">
+                <h3 className="h4 fw-bold mb-2">NAGENDRA</h3>
+                <p className="text-muted mb-3">Management</p>
+
+                <p>
+                  Nagendra plays a key role in operational planning and institutional development at Mother Teresa Educational Foundation.
+                </p>
+                <p>
+                  He focuses on maintaining academic standards, supporting faculty growth, and ensuring smooth coordination across departments.
+                </p>
+                <p>
+                  His commitment to discipline, transparency, and student-centered values helps strengthen the foundation’s long-term vision.
                 </p>
               </div>
             </div>
