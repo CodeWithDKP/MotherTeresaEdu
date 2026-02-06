@@ -75,7 +75,7 @@ export default function Team() {
             {/* Right: Text */}
             <div className="col-12 col-md-7">
               <div className="team-content">
-                <h3 className="h4 fw-bold mb-2">NAGENDRA</h3>
+                <h3 className="h4 fw-bold mb-2">DR.P.NAGENDRA</h3>
                 <p className="text-muted mb-3">Management</p>
 
                 <p>
